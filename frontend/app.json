@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "GCAAN ACTIVT",
+    "slug": "gcaan-activt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/gcaan-logo.png",
+    "scheme": "gcaan",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "iq.gcaan.activities"
+    },
+    "android": {
+      "package": "iq.gcaan.activities",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/gcaan-logo.png",
+        "backgroundColor": "#1E3A8A"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/gcaan-logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/gcaan-logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#1E3A8A"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

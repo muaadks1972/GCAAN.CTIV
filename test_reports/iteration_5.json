@@ -1,0 +1,29 @@
+{
+  "summary": "Verified new feature: denormalized 'employee_department_name' on activities (POST create + startup backfill + PUT department rename cascade) and PDF report header change from 'القسم' → 'القسم الذي قام بالنشاط'. Backend: 49/49 pytest tests pass (44 regression + 5 new TestEmployeeDepartmentName tests covering create-populates, list-returns-field, backfill-migration-populated-existing, department-rename-updates-both-target-and-employee-dept-names, gm-has-null-employee-department-name). Frontend (Expo web, 390x844): admin login OK; Activities screen renders both 'القسم المنفّذ' and 'القسم المستهدف' rows on each employee-created card, and correctly omits 'القسم المنفّذ' for GM-created activities (admin has no department — expected). Reports screen 'تصدير PDF' produces HTML whose weekly table header now reads 'القسم الذي قام بالنشاط' and body cells contain the denormalized department name. No red screen. Only pre-existing shadow* deprecation warnings.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": [
+      {"component": "shadow* style props", "issue": "react-native-web deprecation warning: shadow* props should migrate to boxShadow. Non-blocking, carried over from prior iterations."}
+    ]
+  },
+  "test_report_links": ["/app/backend/tests/test_gcaan_backend.py", "/app/test_reports/pytest/pytest_results.xml"],
+  "action_items": [
+    "(Optional) Migrate remaining shadow* → boxShadow to silence RN-Web deprecation warnings."
+  ],
+  "critical_code_review_comments": [
+    "server.py create_activity correctly resolves employee_department_name via user.department_id lookup (line 397-402). GM (no department) results in null which is intentional and displayed correctly on the UI (line 129 activities.tsx uses !!item.employee_department_name).",
+    "server.py update_department cascades name change to BOTH target_department_name and employee_department_name (lines 231-238). Verified via backend test.",
+    "server.py seed_initial_data backfill migration (lines 159-170) runs on every startup and only touches activities missing the field — idempotent and safe.",
+    "reportExport.ts weekly/monthly table uses employee_department_name (line 83) with new column header 'القسم الذي قام بالنشاط' (line 100). By-department report still uses 'القسم' which is correct since that report groups by department, not by activity."
+  ],
+  "updated_files": ["/app/backend/tests/test_gcaan_backend.py"],
+  "success_rate": {"backend": "100% (49/49)", "frontend": "100% (activities cards + PDF export header verified)"},
+  "seed_data_creation": "Backend tests created TEST_* activities, departments, divisions and users during the run (small volume, prefixed for identification).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Backend now denormalizes employee_department_name on activity documents. Testable via: POST /api/activities as any user with department_id → returned doc has 'employee_department_name'. PUT /api/departments/{id} cascades name to both target_department_name AND employee_department_name in activities. Startup backfill fills the field for pre-existing activities. Frontend Activities cards (activities.tsx) show 'القسم المنفّذ: X' when employee_department_name is present. PDF weekly/monthly report column header is 'القسم الذي قام بالنشاط' (reportExport.ts line 100).",
+  "rca_of_issue": "N/A — new feature working end-to-end."
+}

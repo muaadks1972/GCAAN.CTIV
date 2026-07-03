@@ -1,0 +1,3915 @@
+{
+  "version": 1,
+  "generated_at": "2026-07-02T17:08:36.734857+00:00",
+  "database": "test_database",
+  "collections": {
+    "users": [
+      {
+        "id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "username": "admin",
+        "hashed_password": "$2b$12$1CG5mhdQVh/RTKt8HIUGN.VsRZ3xTKfHk7faVWuw9r86y0ow9iGGK",
+        "full_name": "المدير العام",
+        "role": "general_manager",
+        "department_id": null,
+        "division_id": null,
+        "created_by": null,
+        "created_at": "2026-07-01T07:15:46.184848+00:00"
+      },
+      {
+        "id": "fe9edafa-ed5a-4fd4-8cb8-75badc6fda9b",
+        "username": "TEST_dm_8eca47",
+        "hashed_password": "$2b$12$c02Czzec0YG//QjskUhRXeZZGYsH/EXWNAPXzfYJUqHpUt6lgNkO.",
+        "full_name": "Dept Manager",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T07:26:19.824253+00:00"
+      },
+      {
+        "id": "c4d8bc78-a14a-4ee1-ac2a-f2ec744d5ead",
+        "username": "TEST_divm_a75ad0",
+        "hashed_password": "$2b$12$HMNw4JDhYLbxWnvqoDS4CuissRzTwg9A3sz3LO61dZqhaztBBTnJ6",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "a82cdf7f-1cee-4e4f-9f58-349cfe6a85d5",
+        "created_by": "fe9edafa-ed5a-4fd4-8cb8-75badc6fda9b",
+        "created_at": "2026-07-01T07:26:20.696778+00:00"
+      },
+      {
+        "id": "cfb455b4-08cb-4d4f-8458-7504bca276bf",
+        "username": "TEST_emp_4903b0",
+        "hashed_password": "$2b$12$9avP12gPYVN4/ALed/AzvO.JV61tBznDWdPU0cLJnO2sVdMGl2vfq",
+        "full_name": "Employee",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "a82cdf7f-1cee-4e4f-9f58-349cfe6a85d5",
+        "created_by": "c4d8bc78-a14a-4ee1-ac2a-f2ec744d5ead",
+        "created_at": "2026-07-01T07:26:21.432464+00:00"
+      },
+      {
+        "id": "96da2698-5335-4c3b-aa3c-1d77b6f2713c",
+        "username": "TEST_dm_29c064",
+        "hashed_password": "$2b$12$NNgSRhSPLcr69stiOpCsnuU2s0koNP6ABvHIiBN9A7fGD7gPYwlrO",
+        "full_name": "Dept Manager",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T09:17:02.493696+00:00"
+      },
+      {
+        "id": "249cdedc-5e98-4197-986a-3ce6253a28a0",
+        "username": "TEST_divm_12abe4",
+        "hashed_password": "$2b$12$5u.0Z4yruNbIQMjghAORZufkwIAtsqJGH8Q0bS41dwlp1wgdYBCdC",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "30730967-1124-4111-bddd-40dbe5e090c7",
+        "created_by": "96da2698-5335-4c3b-aa3c-1d77b6f2713c",
+        "created_at": "2026-07-01T09:17:03.347122+00:00"
+      },
+      {
+        "id": "d335e871-65a1-41d0-bf53-c1af03868567",
+        "username": "TEST_emp_25c10e",
+        "hashed_password": "$2b$12$geYpx0JSH02y74WXzV5LTOFUX.MLsRbUFKM8770EcbOqlOFqn/R26",
+        "full_name": "Employee",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "30730967-1124-4111-bddd-40dbe5e090c7",
+        "created_by": "249cdedc-5e98-4197-986a-3ce6253a28a0",
+        "created_at": "2026-07-01T09:17:04.077811+00:00"
+      },
+      {
+        "id": "cb286b15-7858-4833-b154-13baa44455fc",
+        "username": "raad",
+        "hashed_password": "$2b$12$uIwbP1c5REi6SmZmdxkT/.cjnf6bW/YsG9Ii2QmKLblLDIZZx07JS",
+        "full_name": "Raad",
+        "role": "department_manager",
+        "department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T09:21:05.458316+00:00"
+      },
+      {
+        "id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "username": "ss",
+        "hashed_password": "$2b$12$PjsR.KSIjGC5y1iuNbLPcel/kG.JxY3eycXLYXoTOdKGeIeKdFWRa",
+        "full_name": "Ss",
+        "role": "division_manager",
+        "department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "created_by": "cb286b15-7858-4833-b154-13baa44455fc",
+        "created_at": "2026-07-01T09:22:12.771893+00:00"
+      },
+      {
+        "id": "49a7313c-7d19-491b-ae1c-68facb11eacf",
+        "username": "TEST_dm_911309",
+        "hashed_password": "$2b$12$aoXzr6CS/a5ugw/JPOzjGOMqlvhopIdaSgVd3Jqr.ybH0a6KsOwBi",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T10:15:15.730035+00:00"
+      },
+      {
+        "id": "afd041f7-78a9-4618-97d9-c5d159e95da8",
+        "username": "TEST_divm_da8f58",
+        "hashed_password": "$2b$12$ubiyPZgpqg5bySb8KXHL1Ow2RQqzemOQ63W3t1KwbFSZ5pmixsVP2",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "aba812c3-e943-48e3-b48d-0202292c7375",
+        "created_by": "49a7313c-7d19-491b-ae1c-68facb11eacf",
+        "created_at": "2026-07-01T10:15:16.618804+00:00"
+      },
+      {
+        "id": "9d5d9523-4980-4aba-8177-87267862ecff",
+        "username": "TEST_emp_5941f3",
+        "hashed_password": "$2b$12$gbLmXLlBjnZ0EOEgV1MX5eusNW/3xOpW04rAcH7ZWVvWuFSf3bX26",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "aba812c3-e943-48e3-b48d-0202292c7375",
+        "created_by": "afd041f7-78a9-4618-97d9-c5d159e95da8",
+        "created_at": "2026-07-01T10:15:17.356347+00:00"
+      },
+      {
+        "id": "6d86ff35-61b8-497d-bb9d-7fe7c01a5bd2",
+        "username": "TEST_dm_514fe5",
+        "hashed_password": "$2b$12$BFWQFrWLWVkxrcEEmsnW8.BRCSC2AkpMnlt1leyoC7wiVPAJ8wvHi",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T10:30:45.249797+00:00"
+      },
+      {
+        "id": "2d1dc02a-4fc4-46cd-94f0-fd247faee95f",
+        "username": "TEST_divm_1a2ab2",
+        "hashed_password": "$2b$12$d3vyc4gEs/4Adztvewi8IusvnJSPzvhitYNrQiT4f6cxKP9Oo2LiS",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "df24c10d-90da-4204-8d0f-fb8e9c1b472b",
+        "created_by": "6d86ff35-61b8-497d-bb9d-7fe7c01a5bd2",
+        "created_at": "2026-07-01T10:30:46.072218+00:00"
+      },
+      {
+        "id": "d759440c-aa25-424e-a95a-da94cc957656",
+        "username": "TEST_emp_f4d19e",
+        "hashed_password": "$2b$12$F5PCJABuU8GxcMLK6czfYed5n5I.LAY4RDjCy1Bty8gOy.osOy5FO",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "df24c10d-90da-4204-8d0f-fb8e9c1b472b",
+        "created_by": "2d1dc02a-4fc4-46cd-94f0-fd247faee95f",
+        "created_at": "2026-07-01T10:30:46.799738+00:00"
+      },
+      {
+        "id": "489d91e5-3550-4d44-ac47-babcf60eb1eb",
+        "username": "TEST_dm_67f356",
+        "hashed_password": "$2b$12$vcwI/0HXVUXYH3n6kxvD..t509jSaplsoB5CNUV/N8sLqbKJsws.u",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T10:38:41.641037+00:00"
+      },
+      {
+        "id": "5cb3b554-4577-4b35-aee2-908ec567e637",
+        "username": "TEST_divm_c6d3a8",
+        "hashed_password": "$2b$12$QMUgdiiXyL0Wvucx7sWg3uCkmojJHi/6Ep.QvmoddFcEvbykkgadq",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "907ce211-a93c-4353-a410-972397d476d6",
+        "created_by": "489d91e5-3550-4d44-ac47-babcf60eb1eb",
+        "created_at": "2026-07-01T10:38:42.488762+00:00"
+      },
+      {
+        "id": "953c5df1-fbd6-4747-b6af-9d24910aa423",
+        "username": "TEST_emp_526ed5",
+        "hashed_password": "$2b$12$FhW6jyN9AXm0CZ.8bIsev.J75SeeeN0tO0m36pTr0C4nXPynmh89W",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "907ce211-a93c-4353-a410-972397d476d6",
+        "created_by": "5cb3b554-4577-4b35-aee2-908ec567e637",
+        "created_at": "2026-07-01T10:38:43.216867+00:00"
+      },
+      {
+        "id": "7ab09604-c044-4cc9-92fc-1ac04531bea9",
+        "username": "TEST_dm_4d83e1",
+        "hashed_password": "$2b$12$yJ7ZD7ZSRXB8shao3jO9GOUZedb7HplLeUpZ8FUf9OJu5d0IWG8EW",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T11:23:03.640258+00:00"
+      },
+      {
+        "id": "e84dccb1-6fd8-4806-ba04-0213c5236f38",
+        "username": "TEST_divm_1fc354",
+        "hashed_password": "$2b$12$fuF81O9AFeDksa6jUhwNAuQOC1kfRzb7YyfB3BEf0SI2TFuV/6fnS",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "74f7d3f0-115a-474c-bb21-759d7f5d8b64",
+        "created_by": "7ab09604-c044-4cc9-92fc-1ac04531bea9",
+        "created_at": "2026-07-01T11:23:04.500829+00:00"
+      },
+      {
+        "id": "4d5ff168-b1b5-420f-a000-b282a351b593",
+        "username": "TEST_emp_9107c9",
+        "hashed_password": "$2b$12$nvGdbMCptAlAyaWR/ELypu5pm/6e38GpQMu75fkHYsXAuJWEBqBhy",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "74f7d3f0-115a-474c-bb21-759d7f5d8b64",
+        "created_by": "e84dccb1-6fd8-4806-ba04-0213c5236f38",
+        "created_at": "2026-07-01T11:23:05.274136+00:00"
+      },
+      {
+        "id": "85bd41de-b6a0-4fa9-855a-a2705dcec08a",
+        "username": "TEST_dm_91dfdf",
+        "hashed_password": "$2b$12$HPiDOrLewhrpLuuCFathT.qKFr/.uTplpIU.6elN3a1HaaS2NGhgG",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T11:23:57.608396+00:00"
+      },
+      {
+        "id": "1da6ffe6-8765-4f9c-b2a4-70185744ba4e",
+        "username": "TEST_divm_900c93",
+        "hashed_password": "$2b$12$Uese7pICKXyhgHQTZA4IsOVVCsF7QnoD13E4rOkp8iJ0fz7eMm.Gq",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "89c71174-c886-4f5c-85a1-a70450c926e2",
+        "created_by": "85bd41de-b6a0-4fa9-855a-a2705dcec08a",
+        "created_at": "2026-07-01T11:23:58.447266+00:00"
+      },
+      {
+        "id": "16ab05da-0696-4b6c-965c-cae7d10f44f8",
+        "username": "TEST_emp_9355e1",
+        "hashed_password": "$2b$12$5lHv4D1GufpOFks1Ro0Au.lyQSceogygdIiUtL95RuNOOpe2hQS.S",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "89c71174-c886-4f5c-85a1-a70450c926e2",
+        "created_by": "1da6ffe6-8765-4f9c-b2a4-70185744ba4e",
+        "created_at": "2026-07-01T11:23:59.173174+00:00"
+      },
+      {
+        "id": "38fe3f08-5705-4251-b845-90bc45cbcd93",
+        "username": "TEST_deptmgr1",
+        "hashed_password": "$2b$12$X2H/0r28S9msOcGPq0ST8eENYbdg2JTHl60evC4bb4mpf6fPX4002",
+        "full_name": "مدير قسم اختبار",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-01T17:38:52.906850+00:00"
+      },
+      {
+        "id": "efbdc372-8ab7-43f6-9d44-25a026d6a020",
+        "username": "TEST_dm_77b705",
+        "hashed_password": "$2b$12$SeaQd8OWQUoooFCT278E6.waWRGkstZgI54d.wff8boK2hUaCcFxa",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T06:24:39.471973+00:00"
+      },
+      {
+        "id": "4b4337ac-129e-4d5d-9d74-f157b8a3ca40",
+        "username": "TEST_dvm_77b705",
+        "hashed_password": "$2b$12$BDSZvF5pFQRWRi9e5.gTDOHCdKOmsqvq.KSKn2m9WtLiMeGmVuarq",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "division_id": "8bdcedcf-0ea5-438d-9f19-242bb9173672",
+        "created_by": "efbdc372-8ab7-43f6-9d44-25a026d6a020",
+        "created_at": "2026-07-02T06:24:40.205780+00:00"
+      },
+      {
+        "id": "6abfc69f-8585-4012-bff8-bfad2d31fcda",
+        "username": "TEST_emp_77b705",
+        "hashed_password": "$2b$12$SYDTOsBR0rRmyci4D5VmzuL/ljoxjrjeB7LnML6wBCa9e/N/kAQGK",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "division_id": "8bdcedcf-0ea5-438d-9f19-242bb9173672",
+        "created_by": "4b4337ac-129e-4d5d-9d74-f157b8a3ca40",
+        "created_at": "2026-07-02T06:24:40.843796+00:00"
+      },
+      {
+        "id": "1d5eadff-f3ff-4d06-9939-f5dbe7ec14ce",
+        "username": "TEST_dm_8a9a4c",
+        "hashed_password": "$2b$12$i/VyJcPmTETguSf5rOr0/e7BkdXjM09B7r4RZnjFj93Fi3urGwgzu",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T06:24:43.523111+00:00"
+      },
+      {
+        "id": "f8e8b994-2ad2-4c4f-84d8-4f933fcd6372",
+        "username": "TEST_divm_1797e7",
+        "hashed_password": "$2b$12$bzNqyNGx0g2Yq0W.dGNSy.m9A5mwTbrj7Kfm80hY2omqIJiJUlUDu",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "1c1c9e58-2b72-4039-a2b9-1d1463e6985e",
+        "created_by": "1d5eadff-f3ff-4d06-9939-f5dbe7ec14ce",
+        "created_at": "2026-07-02T06:24:44.347525+00:00"
+      },
+      {
+        "id": "753d6694-8ba0-40a7-b0aa-8014ac90dc1d",
+        "username": "TEST_emp_b24224",
+        "hashed_password": "$2b$12$lJ/8xQFMaqDiMwIp3qwgB.yTRPUNde8zm808ECtt.rupCpxiLTT3C",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "1c1c9e58-2b72-4039-a2b9-1d1463e6985e",
+        "created_by": "f8e8b994-2ad2-4c4f-84d8-4f933fcd6372",
+        "created_at": "2026-07-02T06:24:45.080942+00:00"
+      },
+      {
+        "id": "074d1be4-ab61-4f30-90db-533d306376b9",
+        "username": "TEST_dm_276895",
+        "hashed_password": "$2b$12$vU/Eq5KlKMPhtUU//8nOX.AiIH4CL7RSZ8NBE76pn9BYc5H.N.lZO",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:02:39.594396+00:00"
+      },
+      {
+        "id": "79bd1fc1-43f9-4038-a830-230ef4d71ae7",
+        "username": "TEST_dvm_276895",
+        "hashed_password": "$2b$12$U5vLhnaIhLkZq59rVSdNoetJGKDH9w4xUF/YF9cD9G.f/sH5fJ05u",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "division_id": "e9eeaf3d-e0e2-4fd2-abda-9b52dd508440",
+        "created_by": "074d1be4-ab61-4f30-90db-533d306376b9",
+        "created_at": "2026-07-02T09:02:40.359536+00:00"
+      },
+      {
+        "id": "06956d4e-abfe-4f54-b7ce-7859c5576e7c",
+        "username": "TEST_emp_276895",
+        "hashed_password": "$2b$12$PqIjQfnR10oGnI1sVAhcGOTC.ZGeNaRo.MOZYu70gO.gdy2RuZtJ2",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "division_id": "e9eeaf3d-e0e2-4fd2-abda-9b52dd508440",
+        "created_by": "79bd1fc1-43f9-4038-a830-230ef4d71ae7",
+        "created_at": "2026-07-02T09:02:41.033082+00:00"
+      },
+      {
+        "id": "f80293ba-b3bf-4927-a514-0555a65672e7",
+        "username": "TEST_del_dm_e9085c",
+        "hashed_password": "$2b$12$VFKDblOR6aeOxcxBMB1vO.mrwXRndzOP6OOTHCj1XOSjTWxmCzuRq",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:02:42.801022+00:00"
+      },
+      {
+        "id": "6b2a58a3-744c-45d9-8416-b508d101b604",
+        "username": "TEST_del_divm_45ef98",
+        "hashed_password": "$2b$12$W7/uue.wPIn6tBopcR58JOgj81OV4vYgeInyJ/vsKa/Z4UCS.0iSu",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "division_id": "095af1c9-1348-46c3-8fb5-ccb4c5b429c7",
+        "created_by": "f80293ba-b3bf-4927-a514-0555a65672e7",
+        "created_at": "2026-07-02T09:02:43.449849+00:00"
+      },
+      {
+        "id": "bba59a3e-a6fd-48fb-8916-6e451b40b7b5",
+        "username": "TEST_del_emp_bdb10c",
+        "hashed_password": "$2b$12$zwUgm97xZEe.3inbLrFDFe38EtB1kn2NXE/ZsBTPowZnGqWIHHPJK",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "division_id": "095af1c9-1348-46c3-8fb5-ccb4c5b429c7",
+        "created_by": "6b2a58a3-744c-45d9-8416-b508d101b604",
+        "created_at": "2026-07-02T09:02:44.121203+00:00"
+      },
+      {
+        "id": "047af6c8-25ec-42e3-b439-97eb2ac4a6ff",
+        "username": "TEST_dm_446086",
+        "hashed_password": "$2b$12$ZHVuU5rjzJQrxAWPEu9kUOKWsn2DPCoXpkAtqqCCsZHpXFFFS0/6S",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:02:50.526828+00:00"
+      },
+      {
+        "id": "446b4c8e-6054-4689-8e3a-b5bc06c28859",
+        "username": "TEST_divm_6a1d86",
+        "hashed_password": "$2b$12$C8AbVc1u5qCvgemk57Dch.6nNopFZCyfqVJCrl15EDMcWTBqruHoG",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "4aee7466-3694-48b3-b5f8-f6106b445b3b",
+        "created_by": "047af6c8-25ec-42e3-b439-97eb2ac4a6ff",
+        "created_at": "2026-07-02T09:02:51.348102+00:00"
+      },
+      {
+        "id": "ac675d4b-f996-4df7-844d-f0439f23e60e",
+        "username": "TEST_emp_19b316",
+        "hashed_password": "$2b$12$HiJpdcPvE2ugchPG3WRP4OxWNnVeLb7AvbZ9s0sX5Y2yTP0bo093e",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "4aee7466-3694-48b3-b5f8-f6106b445b3b",
+        "created_by": "446b4c8e-6054-4689-8e3a-b5bc06c28859",
+        "created_at": "2026-07-02T09:02:52.069437+00:00"
+      },
+      {
+        "id": "ad745376-2113-47a8-8ecd-012c6afbe2bc",
+        "username": "TEST_del_dm_4f9c9a",
+        "hashed_password": "$2b$12$hOwG41oNpBNEDcELa.xeZ.A0rCqui9N9aq5.cG17Yr548Mlfz/IIW",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:04:05.238081+00:00"
+      },
+      {
+        "id": "e1c957ca-b417-4c2a-b7a9-c80beece2f11",
+        "username": "TEST_del_divm_7de474",
+        "hashed_password": "$2b$12$cBIP5.CkuMI7f3Xt4CLGF.NXaAPCgh97KoxKT.gS..6d8SuKfFkPu",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "division_id": "1a2dda76-4543-4fec-8908-ffac5adb6286",
+        "created_by": "ad745376-2113-47a8-8ecd-012c6afbe2bc",
+        "created_at": "2026-07-02T09:04:05.884072+00:00"
+      },
+      {
+        "id": "3c6fd435-2144-45a5-909a-5dde7c47755a",
+        "username": "TEST_del_emp_4058ff",
+        "hashed_password": "$2b$12$wOTWETFqxyFQBWqG1BEAG.M.6SphQkLLjWQv7Uu6aLEaBMSxZJUZ2",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "division_id": "1a2dda76-4543-4fec-8908-ffac5adb6286",
+        "created_by": "e1c957ca-b417-4c2a-b7a9-c80beece2f11",
+        "created_at": "2026-07-02T09:04:06.514683+00:00"
+      },
+      {
+        "id": "00ea2673-65fc-4613-a701-98b135368f7c",
+        "username": "TEST_dm_654cc0",
+        "hashed_password": "$2b$12$v00G8CuuShnIh7FSA07UfeX13Yrc3PeeAcgaq0HgVmDIhG7qwdr0a",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:07:31.089479+00:00"
+      },
+      {
+        "id": "57f88e66-17ac-4b41-ad92-b3c21a4a8cd9",
+        "username": "TEST_dvm_654cc0",
+        "hashed_password": "$2b$12$DYQiVECMx1XGrrSidhzmreCzmZCg3nMTO03xBWx.ysTyiuHiWv4IO",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "division_id": "e37ea236-f777-46fa-b834-df3f463dc2f4",
+        "created_by": "00ea2673-65fc-4613-a701-98b135368f7c",
+        "created_at": "2026-07-02T09:07:31.816721+00:00"
+      },
+      {
+        "id": "31a181fe-114e-499c-9b3b-7deee0476b8d",
+        "username": "TEST_emp_654cc0",
+        "hashed_password": "$2b$12$C3NBdoj4.WnYtXSkBvwTt.PtxbqwqKZ6vpuqZ4LJg.tI4EZLhi7mC",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "division_id": "e37ea236-f777-46fa-b834-df3f463dc2f4",
+        "created_by": "57f88e66-17ac-4b41-ad92-b3c21a4a8cd9",
+        "created_at": "2026-07-02T09:07:32.464416+00:00"
+      },
+      {
+        "id": "02b96fa1-4f73-4acc-9a82-90a9cc14211c",
+        "username": "TEST_del_dm_d548e2",
+        "hashed_password": "$2b$12$x95T7uljAe9/9lyjl6t18.EoryB.qxLV4a51gCePTb72a6zxw25p6",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:07:34.111221+00:00"
+      },
+      {
+        "id": "ae9971be-02ac-46fc-93f7-704697cdc9ca",
+        "username": "TEST_del_divm_9a6a43",
+        "hashed_password": "$2b$12$cPajr5rrYb.S7I0Jymc7KuMG5KOLaHgpfehxdlQ8AG4/5KWSHplFq",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "division_id": "7114f88e-a20e-4aea-81aa-bf3e29884959",
+        "created_by": "02b96fa1-4f73-4acc-9a82-90a9cc14211c",
+        "created_at": "2026-07-02T09:07:34.744033+00:00"
+      },
+      {
+        "id": "09ea3f57-92be-40be-90c4-e654257f4c48",
+        "username": "TEST_del_emp_dec322",
+        "hashed_password": "$2b$12$5mrMjdM1xm6vGRwEGNudgOCCW.yElvB5nViL1Gq62WL/YnEcTUh1a",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "division_id": "7114f88e-a20e-4aea-81aa-bf3e29884959",
+        "created_by": "ae9971be-02ac-46fc-93f7-704697cdc9ca",
+        "created_at": "2026-07-02T09:07:35.387373+00:00"
+      },
+      {
+        "id": "ff1a28ff-cb78-4bfb-8dd6-cab13f93fb0c",
+        "username": "TEST_dm_f2f71c",
+        "hashed_password": "$2b$12$/UhCArNYVtSmMGjqOay.kesQJxpS/1YL.uyRQDvoyCj8yRntc5NJK",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T09:07:41.572102+00:00"
+      },
+      {
+        "id": "29847a15-413f-4ab0-a6ca-5576f9c67282",
+        "username": "TEST_divm_ea3393",
+        "hashed_password": "$2b$12$6LTuJDNZuxqOk3drUeoEE.QM.vUbJjUTANoHbDgSQBsnik3CfNBqW",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "921a07c2-6398-42de-8ce7-c4836411648f",
+        "created_by": "ff1a28ff-cb78-4bfb-8dd6-cab13f93fb0c",
+        "created_at": "2026-07-02T09:07:42.398199+00:00"
+      },
+      {
+        "id": "748c38a6-5290-423b-a123-7f3cc4435a8c",
+        "username": "TEST_emp_a02cd0",
+        "hashed_password": "$2b$12$ECIeuvyEHUbIMIfg55IC6eaxhQgom2PIH97TY4vjr8QIaEJS5RAee",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "921a07c2-6398-42de-8ce7-c4836411648f",
+        "created_by": "29847a15-413f-4ab0-a6ca-5576f9c67282",
+        "created_at": "2026-07-02T09:07:43.121815+00:00"
+      },
+      {
+        "id": "6f1f5122-9afe-4e7c-8b6f-f145a09a38c1",
+        "username": "TEST_admin_dm_probe",
+        "hashed_password": "$2b$12$Tt68MlMYkP6Lt65cEOKOEucppKLSwyPLMY7Xpx.A0IRsCrJjIbO3q",
+        "full_name": "TEST DM Probe",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T14:43:00.831134+00:00"
+      },
+      {
+        "id": "53b17faa-22b8-4a82-a1bf-0e9570a42d8d",
+        "username": "TEST_dm_bbd132",
+        "hashed_password": "$2b$12$2vHO1/.xnfRdLYQ2rVoYsOFgI3LXfZ/JY9DKgsKQ991j05RUP3Rkq",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T14:43:02.852564+00:00"
+      },
+      {
+        "id": "f879c855-bee2-412c-8650-1fefd245356e",
+        "username": "TEST_dvm_bbd132",
+        "hashed_password": "$2b$12$WVbQqauRZ1YLzcaeCkrLf.8LEgheSS7Dz3QADLicM9T09ITt.kMbW",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "division_id": "fab33186-59ec-4f34-8bdf-3db60753e21a",
+        "created_by": "53b17faa-22b8-4a82-a1bf-0e9570a42d8d",
+        "created_at": "2026-07-02T14:43:03.651946+00:00"
+      },
+      {
+        "id": "ad9545da-2527-46d9-9a75-9727ba7c23a1",
+        "username": "TEST_emp_bbd132",
+        "hashed_password": "$2b$12$I3JWlQF61sCW4zwp91nIGuVD.DsDtRTQLZT1Iu5ywuULM7xkyYRJ6",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "division_id": "fab33186-59ec-4f34-8bdf-3db60753e21a",
+        "created_by": "f879c855-bee2-412c-8650-1fefd245356e",
+        "created_at": "2026-07-02T14:43:04.297930+00:00"
+      },
+      {
+        "id": "c7702b0a-4b38-4898-9b6c-dee4e49a4a07",
+        "username": "TEST_del_dm_f110fe",
+        "hashed_password": "$2b$12$vux0P/8UAIzKufxwbH.mwuiPMiclg2ruLrwfjCkPmZIeP5XUCnB5O",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T14:43:06.110803+00:00"
+      },
+      {
+        "id": "cac7f26a-5887-4783-95db-804713cc55f9",
+        "username": "TEST_del_divm_6d2ea9",
+        "hashed_password": "$2b$12$EYo/.OhgXZavGU01/SrYl.DtUnCwNvJk95JLOhY61u/XQkSvvDRO6",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "division_id": "d4516dec-30fa-4641-bb0b-01b96754ee63",
+        "created_by": "c7702b0a-4b38-4898-9b6c-dee4e49a4a07",
+        "created_at": "2026-07-02T14:43:06.781776+00:00"
+      },
+      {
+        "id": "641d079c-f9a5-4e6d-9d64-79fb3ddc2165",
+        "username": "TEST_del_emp_7f3dd8",
+        "hashed_password": "$2b$12$LNoV3SZoq27iNaUb4.ZExucDIsRpsRrbjAOJlAUPkqwGcPzRhtgjK",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "division_id": "d4516dec-30fa-4641-bb0b-01b96754ee63",
+        "created_by": "cac7f26a-5887-4783-95db-804713cc55f9",
+        "created_at": "2026-07-02T14:43:07.432055+00:00"
+      },
+      {
+        "id": "aafe0ac8-a7b2-4383-a2ff-2ef97af6d8cb",
+        "username": "TEST_dm_801fe3",
+        "hashed_password": "$2b$12$wcUbCzQj3DzUTED1VRCYj.k8r45xY2PUemP5Scs871gAHt7kEOMuC",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T14:43:14.102944+00:00"
+      },
+      {
+        "id": "33e2e591-87da-4dc8-855c-c97684df19a3",
+        "username": "TEST_divm_894cf6",
+        "hashed_password": "$2b$12$bgBBM7Rmpsgezv5RwODu4.LY7wzz9d1WNMoNnu3cfAASg.M91Oku.",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "f58b601a-21c5-4d87-9fd2-a290891d3d4e",
+        "created_by": "aafe0ac8-a7b2-4383-a2ff-2ef97af6d8cb",
+        "created_at": "2026-07-02T14:43:14.986389+00:00"
+      },
+      {
+        "id": "97b26fb6-c3a2-4c99-8eb1-c22062e687f5",
+        "username": "TEST_emp_b6cb9b",
+        "hashed_password": "$2b$12$nIDPJViBg73l3QRqqqjrRurTjm2jCV9KGcAIMyry7pzJX/TIJbdVe",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "f58b601a-21c5-4d87-9fd2-a290891d3d4e",
+        "created_by": "33e2e591-87da-4dc8-855c-c97684df19a3",
+        "created_at": "2026-07-02T14:43:15.747858+00:00"
+      },
+      {
+        "id": "be2bd7fe-8df0-40a4-9ed7-cddd053e7059",
+        "username": "TEST_ui_dm_1783003604",
+        "hashed_password": "$2b$12$g/gPIILfiRdqXNPeysEV8.7fsNpjp8WUZv02G0MtFJ9idIQX3nWam",
+        "full_name": "TEST UI DM",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T14:46:45.164590+00:00"
+      },
+      {
+        "id": "730a879e-61d1-44b3-88dd-2d85dd0d13bc",
+        "username": "TEST_audit_dm_probe",
+        "hashed_password": "$2b$12$y3YR6P5UhyZiVTbkSLQThuixLFYaJ2jjTpkXS2Vp6mpiAiq2iC0M.",
+        "full_name": "TEST Audit DM",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T15:47:55.594470+00:00"
+      },
+      {
+        "id": "cf6ced5c-6140-4f42-b43c-36422222c374",
+        "username": "TEST_dm_47e277",
+        "hashed_password": "$2b$12$rqfkhauKcrf0oAMEfK7nPeoZXhzPMH62qwqwHpGxesrQ3KvN0mIg.",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T15:48:15.744565+00:00"
+      },
+      {
+        "id": "da246037-ed1e-40a8-9ea9-f785421c1485",
+        "username": "TEST_dvm_47e277",
+        "hashed_password": "$2b$12$iEIhXmkYn9GnKjrKGIMKC.edjMlSXpWC8t5FbVE7KhvHG7HlTY602",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "division_id": "27a19e16-c60b-43b3-9f9b-5e68af84a7ae",
+        "created_by": "cf6ced5c-6140-4f42-b43c-36422222c374",
+        "created_at": "2026-07-02T15:48:16.505622+00:00"
+      },
+      {
+        "id": "2075a838-48bc-4619-ba14-14807a84f075",
+        "username": "TEST_emp_47e277",
+        "hashed_password": "$2b$12$L/f/pcPKn66fz6zh6LxqyeEAKVCx7xCTPyf6GA9jqY1pEnI9y/oxa",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "division_id": "27a19e16-c60b-43b3-9f9b-5e68af84a7ae",
+        "created_by": "da246037-ed1e-40a8-9ea9-f785421c1485",
+        "created_at": "2026-07-02T15:48:17.178958+00:00"
+      },
+      {
+        "id": "8804396d-c444-41f9-9a44-7d3dc28cea52",
+        "username": "TEST_del_dm_ff20ad",
+        "hashed_password": "$2b$12$FWgFbIamWwzV/MTzJtLwluvSkEHvGVv2iRiOmKJ8pILcFB33PAKfG",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T15:48:18.972053+00:00"
+      },
+      {
+        "id": "51f35e8d-2339-4ce8-80b2-4705971d65cb",
+        "username": "TEST_del_divm_620167",
+        "hashed_password": "$2b$12$cly7LnD3KTcx/l9E0BbnNuLt3OSBY7Sgi/ZS65H5EKeLsQ8jxwDP2",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "division_id": "ecdbf665-a6b8-4985-a4be-3f7667bc6408",
+        "created_by": "8804396d-c444-41f9-9a44-7d3dc28cea52",
+        "created_at": "2026-07-02T15:48:19.628022+00:00"
+      },
+      {
+        "id": "cee3fc95-39e9-42e9-bdfb-33020b76d0cf",
+        "username": "TEST_del_emp_5e6c6a",
+        "hashed_password": "$2b$12$3RsxocclGtkA8eiXmuXsu.VbJ8uZVivKjdYRyCgcgj5tJLqRSqt8i",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "division_id": "ecdbf665-a6b8-4985-a4be-3f7667bc6408",
+        "created_by": "51f35e8d-2339-4ce8-80b2-4705971d65cb",
+        "created_at": "2026-07-02T15:48:20.299538+00:00"
+      },
+      {
+        "id": "d84f0607-4ec3-404a-95d7-2f7f47d3c23c",
+        "username": "TEST_dm_dbd94d",
+        "hashed_password": "$2b$12$vDPgiYjeoau7iNeRAholJ.rfFBd37VWN5uMd1yZoMFOrOFzbkp.nC",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T15:49:26.418915+00:00"
+      },
+      {
+        "id": "a0922ac6-0fdb-4266-867a-2b917b64bc6d",
+        "username": "TEST_divm_07cdc7",
+        "hashed_password": "$2b$12$TotdjXQsZzOomVzUpOsgceh.KPNJsDcEbfHONq3YjccKyfgXunfIG",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "f38be6cf-e6d9-42da-adab-d085e5c13a23",
+        "created_by": "d84f0607-4ec3-404a-95d7-2f7f47d3c23c",
+        "created_at": "2026-07-02T15:49:27.313948+00:00"
+      },
+      {
+        "id": "e91c91dd-6602-47c7-97b4-cddbd1787668",
+        "username": "TEST_emp_6c7c69",
+        "hashed_password": "$2b$12$Wl4kf.bXIA0nKVf7VgQPjO8DFxnDjX.MrR3P1z8UnqMIAsP1Dk3X6",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "f38be6cf-e6d9-42da-adab-d085e5c13a23",
+        "created_by": "a0922ac6-0fdb-4266-867a-2b917b64bc6d",
+        "created_at": "2026-07-02T15:49:28.104342+00:00"
+      },
+      {
+        "id": "ffbb5606-b0eb-4ac7-b994-77e9de981faa",
+        "username": "TEST_dm_e35dcf",
+        "hashed_password": "$2b$12$qn6B/NvEoMksXs3/GVkNI.vujydWN0e/v1MUag0jad1J8mAAUJ0RG",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:01:49.001117+00:00"
+      },
+      {
+        "id": "9659a03b-80d6-4e27-868a-4673c556f39c",
+        "username": "TEST_dvm_e35dcf",
+        "hashed_password": "$2b$12$YKZDP7HBZd0poAJoLYbIjOMbYsX5pyK4SV8.39SDPg/LL0IBCsxm6",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "division_id": "b1543410-e550-417f-aca7-127f3f3c4167",
+        "created_by": "ffbb5606-b0eb-4ac7-b994-77e9de981faa",
+        "created_at": "2026-07-02T16:01:49.809003+00:00"
+      },
+      {
+        "id": "227fa814-4a90-4dfe-9c86-b5c746976837",
+        "username": "TEST_emp_e35dcf",
+        "hashed_password": "$2b$12$Q260l9/7Z//cuJYggdf0u.FjLjbkIMd76gmTTvawopVclvvipdmH6",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "division_id": "b1543410-e550-417f-aca7-127f3f3c4167",
+        "created_by": "9659a03b-80d6-4e27-868a-4673c556f39c",
+        "created_at": "2026-07-02T16:01:50.493605+00:00"
+      },
+      {
+        "id": "4ac02f0d-a2ca-4f7b-bbff-179aec4bb8b0",
+        "username": "TEST_del_dm_d5359b",
+        "hashed_password": "$2b$12$uqMLHRvnLXwDYUEF0Zj.a.WykJG81MsFwmmAl9JJa8B.d52cOJDtO",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:01:52.222613+00:00"
+      },
+      {
+        "id": "c55c43a6-3996-406d-bf57-3874ebb0c089",
+        "username": "TEST_del_divm_23ab65",
+        "hashed_password": "$2b$12$G6OLPrvLo8H4OIjQYj8oKOLPwedmfwf9O1wrLiG2Q5pRe1XqjNoZi",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "division_id": "9947ee0f-3da3-4873-88f1-3ae5fdc5b208",
+        "created_by": "4ac02f0d-a2ca-4f7b-bbff-179aec4bb8b0",
+        "created_at": "2026-07-02T16:01:52.884669+00:00"
+      },
+      {
+        "id": "b21e7d4e-8e63-4ce9-9a4e-b11985cfe035",
+        "username": "TEST_del_emp_73be37",
+        "hashed_password": "$2b$12$NuoMycTh0OCdD1Ath1fZbOw0rkM73B2ydbs1YSZKyyNLYly2lbph6",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "division_id": "9947ee0f-3da3-4873-88f1-3ae5fdc5b208",
+        "created_by": "c55c43a6-3996-406d-bf57-3874ebb0c089",
+        "created_at": "2026-07-02T16:01:53.583488+00:00"
+      },
+      {
+        "id": "feced565-4530-40bf-8883-09f518e1e51b",
+        "username": "TEST_dm_14fda4",
+        "hashed_password": "$2b$12$XYVSPXWAZNI9mFyIDLhj9Oy6oDMiUp5QPtcA.4a/WY1f5YzfTkdQa",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:02:00.499729+00:00"
+      },
+      {
+        "id": "06a69435-1362-4d40-95de-b74ca4e1db0b",
+        "username": "TEST_divm_03740f",
+        "hashed_password": "$2b$12$Eb3Z3pVlRdWaJr1wc3/OBu9jRxT6n73hOUAyKdXcqW2sQJ3PtlFzi",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "71e0396a-3107-4b4f-99f7-23259b0e5658",
+        "created_by": "feced565-4530-40bf-8883-09f518e1e51b",
+        "created_at": "2026-07-02T16:02:01.352838+00:00"
+      },
+      {
+        "id": "2dbc0e89-0a68-4128-9ce3-d59447782679",
+        "username": "TEST_emp_71ff82",
+        "hashed_password": "$2b$12$Dk6cD09CDeUzugkx1Df1pu3KNK3il9Ph6CqpWH1qlziRqiLA5ttnC",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "71e0396a-3107-4b4f-99f7-23259b0e5658",
+        "created_by": "06a69435-1362-4d40-95de-b74ca4e1db0b",
+        "created_at": "2026-07-02T16:02:02.137059+00:00"
+      },
+      {
+        "id": "b8295fc2-05ee-473f-a416-9c546ca315c2",
+        "username": "TEST_dm_463f76",
+        "hashed_password": "$2b$12$Xxr6O0PkUB3OJI.4bb2hDewwLIdexpOYCfS6ZniHOzqpBLjp6qRXW",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:24:22.069797+00:00"
+      },
+      {
+        "id": "307a04a1-e08c-49cd-84f3-72869bc47cf8",
+        "username": "TEST_dvm_463f76",
+        "hashed_password": "$2b$12$YQvVR8uGKmgmtZ4Oz/u3AeQsN5uh.mUd9z3CWF.0C7ou9SDOgCcE2",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "division_id": "9d3714e3-0033-48eb-ab23-94bbda3b6acf",
+        "created_by": "b8295fc2-05ee-473f-a416-9c546ca315c2",
+        "created_at": "2026-07-02T16:24:22.895122+00:00"
+      },
+      {
+        "id": "ad6ca19f-8d04-4934-89fd-3c01294a6d5e",
+        "username": "TEST_emp_463f76",
+        "hashed_password": "$2b$12$otq22tmI9OBvo2ZvU80kvuaFpfeUbUcbNBVDp9paGjAmSKyWOKUUO",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "division_id": "9d3714e3-0033-48eb-ab23-94bbda3b6acf",
+        "created_by": "307a04a1-e08c-49cd-84f3-72869bc47cf8",
+        "created_at": "2026-07-02T16:24:23.546533+00:00"
+      },
+      {
+        "id": "fc653d7f-cb88-4ef7-98f8-a38192a2e4bd",
+        "username": "TEST_del_dm_b61479",
+        "hashed_password": "$2b$12$m7d1GpekGKB3.nEe0R1QQuxh/kU1gnvi6m3pVW7ZQH25iIZaqsLRq",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:24:25.328331+00:00"
+      },
+      {
+        "id": "78cae803-77a3-4751-b6a4-c8a015eaccf9",
+        "username": "TEST_del_divm_5745ce",
+        "hashed_password": "$2b$12$gdisS3KpTIplz8fqPO7BMOc4JNcJact92AxLvvvSIP2FhMtt78PAa",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "division_id": "7e4e49cf-ec01-4d00-8c00-47d29b20a085",
+        "created_by": "fc653d7f-cb88-4ef7-98f8-a38192a2e4bd",
+        "created_at": "2026-07-02T16:24:25.988247+00:00"
+      },
+      {
+        "id": "07d8e365-70f7-4f89-8785-a65a9a1f4228",
+        "username": "TEST_del_emp_b0ef4f",
+        "hashed_password": "$2b$12$4iGYt0U7r8MFiUszAjVIJ.iRQxt1CkQuYSQrRFoXFSs8jnSPVnmHq",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "division_id": "7e4e49cf-ec01-4d00-8c00-47d29b20a085",
+        "created_by": "78cae803-77a3-4751-b6a4-c8a015eaccf9",
+        "created_at": "2026-07-02T16:24:26.727359+00:00"
+      },
+      {
+        "id": "75957d62-bdb2-4769-8b88-8a3be3280be4",
+        "username": "TEST_dm_dc6ce1",
+        "hashed_password": "$2b$12$7Hvp/ObgV9orsz4MKKhzmepANljFZrIVaTXXlFckUuVhgL5vE8Yta",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:24:33.321972+00:00"
+      },
+      {
+        "id": "e949ffc1-312d-4903-954c-47b81596e306",
+        "username": "TEST_divm_26f619",
+        "hashed_password": "$2b$12$cZs/M.vkcf.UhM14z.lWwugHEcetIevfGU.6T0W6R4Go8GtFpHkSG",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "425737cd-5b6d-4c36-96c0-0581ab3d513d",
+        "created_by": "75957d62-bdb2-4769-8b88-8a3be3280be4",
+        "created_at": "2026-07-02T16:24:34.207351+00:00"
+      },
+      {
+        "id": "e81846a6-f908-41aa-ae96-176e8c788c45",
+        "username": "TEST_emp_370cb7",
+        "hashed_password": "$2b$12$U.tu0NkGMuIJcUa0FWkQleKzK/y6TLOQbkRtAvmUhjHFxJuC8.fKm",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "425737cd-5b6d-4c36-96c0-0581ab3d513d",
+        "created_by": "e949ffc1-312d-4903-954c-47b81596e306",
+        "created_at": "2026-07-02T16:24:34.958071+00:00"
+      },
+      {
+        "id": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+        "username": "TEST_divscope_dm_289b07",
+        "hashed_password": "$2b$12$XnVh8KDJCW3..uB.Z.dGEu7/ElmBipFSEIYcTuWxy6RKp31OYEXSG",
+        "full_name": "DM X",
+        "role": "department_manager",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:26:51.651193+00:00"
+      },
+      {
+        "id": "28dec914-4089-4e6a-8b19-1dbc38c8a2f6",
+        "username": "TEST_divscope_dma_289b07",
+        "hashed_password": "$2b$12$BaGqIoGcwNmFHUnMdxMYb.YLAPx1N1t/vJb6hdWvOlvDXu8LdnBfi",
+        "full_name": "Divm A",
+        "role": "division_manager",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "created_by": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+        "created_at": "2026-07-02T16:26:52.543303+00:00"
+      },
+      {
+        "id": "04e5dd0f-140f-4128-b721-7b2673e89ed6",
+        "username": "TEST_divscope_dmb_289b07",
+        "hashed_password": "$2b$12$kZUb9CVxBKPZlHlM5FexlubvUfomcjxBDo/ZZb8UdMiAcex486me.",
+        "full_name": "Divm B",
+        "role": "division_manager",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": "9ad0d0f7-7b52-4984-b239-6997df22cbf6",
+        "created_by": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+        "created_at": "2026-07-02T16:26:53.185680+00:00"
+      },
+      {
+        "id": "5c4b0434-236c-45b6-b8fa-12622ae72fb1",
+        "username": "TEST_divscope_e1_289b07",
+        "hashed_password": "$2b$12$Ss6b5gmBTHlmfjLKCjaCuuOAouOM/xsrh1LnEJr8CycJrbm30xgB6",
+        "full_name": "Emp E1",
+        "role": "employee",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "created_by": "28dec914-4089-4e6a-8b19-1dbc38c8a2f6",
+        "created_at": "2026-07-02T16:26:53.838988+00:00"
+      },
+      {
+        "id": "d11afc97-816d-4cfc-8a56-d9a348e8cf6e",
+        "username": "TEST_divscope_e2_289b07",
+        "hashed_password": "$2b$12$uEHeQKWdqaJVNXHOFQ0dGukzfTbsLQKwGB3iVdArwnJyeBJcyq5ly",
+        "full_name": "Emp E2",
+        "role": "employee",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "created_by": "28dec914-4089-4e6a-8b19-1dbc38c8a2f6",
+        "created_at": "2026-07-02T16:26:54.500986+00:00"
+      },
+      {
+        "id": "16e8f211-a61d-4d5f-9148-208bab270893",
+        "username": "TEST_divscope_e3_289b07",
+        "hashed_password": "$2b$12$tRXU5pA2sv5/GdjWN16w4eY0LTdlXQg8mgfX5EMOwNqeW0RGhdEMu",
+        "full_name": "Emp E3",
+        "role": "employee",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "division_id": "9ad0d0f7-7b52-4984-b239-6997df22cbf6",
+        "created_by": "04e5dd0f-140f-4128-b721-7b2673e89ed6",
+        "created_at": "2026-07-02T16:26:55.148507+00:00"
+      },
+      {
+        "id": "8bac1f34-7b52-456b-9358-dce79ed7683b",
+        "username": "TEST_dm_ecbe94",
+        "hashed_password": "$2b$12$rukzgS.V9cJuWRGIbSJnAuRYBsKAJS9fjvpN4YzkN9Hd1pvuyxlMa",
+        "full_name": "Test DeptMgr",
+        "role": "department_manager",
+        "department_id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:27:09.856082+00:00"
+      },
+      {
+        "id": "6613fdc5-5c29-4551-ad29-e252e8a23d77",
+        "username": "TEST_dvm_ecbe94",
+        "hashed_password": "$2b$12$LNwGkhZm9ld5d21DmdN4Ze50PjSYKt/iK79xwkE/DPV/vu4TpTebq",
+        "full_name": "Test DivMgr",
+        "role": "division_manager",
+        "department_id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "division_id": "9541b460-8c6c-49e5-a552-7719fe7029bd",
+        "created_by": "8bac1f34-7b52-456b-9358-dce79ed7683b",
+        "created_at": "2026-07-02T16:27:10.742795+00:00"
+      },
+      {
+        "id": "586e1a2f-80e5-4cd6-b3e3-f675c277143e",
+        "username": "TEST_emp_ecbe94",
+        "hashed_password": "$2b$12$8AfpKrgH.mstdorvpbA66es0aefkTM/4agoPqdeu6UjQqVsMkUBze",
+        "full_name": "Test Emp",
+        "role": "employee",
+        "department_id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "division_id": "9541b460-8c6c-49e5-a552-7719fe7029bd",
+        "created_by": "6613fdc5-5c29-4551-ad29-e252e8a23d77",
+        "created_at": "2026-07-02T16:27:11.450664+00:00"
+      },
+      {
+        "id": "0a822cff-6258-4472-866d-88096f16a65f",
+        "username": "TEST_del_dm_4b72c1",
+        "hashed_password": "$2b$12$Xf9Ss3jSbJZXZvkh8AiCfuUrNeY5iOt9mK9h1Q1lmYMo8vjb8ih6m",
+        "full_name": "Del DM",
+        "role": "department_manager",
+        "department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:27:13.594510+00:00"
+      },
+      {
+        "id": "e58353d3-a2fb-4e5c-b2f0-f40a208050cf",
+        "username": "TEST_del_divm_fc87ed",
+        "hashed_password": "$2b$12$M/V33bq21ZTVGl4B0Rfxee25H7mKbUB33iFhHx0YiQNiY4YK.KqKy",
+        "full_name": "Del DivM",
+        "role": "division_manager",
+        "department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "division_id": "3ca77de4-1067-4761-9901-c9882e031a01",
+        "created_by": "0a822cff-6258-4472-866d-88096f16a65f",
+        "created_at": "2026-07-02T16:27:14.340514+00:00"
+      },
+      {
+        "id": "9eede3c1-adf4-443e-843a-ce099f5c14f2",
+        "username": "TEST_del_emp_1bcec0",
+        "hashed_password": "$2b$12$hdp5yzTL8wPjjyeiiYsDL.gy2FjbdL0WvilIanXININ4RiMs9f5Nq",
+        "full_name": "Del Emp",
+        "role": "employee",
+        "department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "division_id": "3ca77de4-1067-4761-9901-c9882e031a01",
+        "created_by": "e58353d3-a2fb-4e5c-b2f0-f40a208050cf",
+        "created_at": "2026-07-02T16:27:15.083022+00:00"
+      },
+      {
+        "id": "fbc4cd03-4449-4018-99a4-3f63ac9d8bd1",
+        "username": "TEST_dm_553071",
+        "hashed_password": "$2b$12$fU8d04Lr/6HMx2sOUU0E/.BG9oygf6mSu8Fx9QaXrZPssSEIRri4u",
+        "full_name": "DM Updated",
+        "role": "department_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": null,
+        "created_by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "created_at": "2026-07-02T16:27:43.007442+00:00"
+      },
+      {
+        "id": "2c323014-7236-4cc6-870f-02cbd261ca8d",
+        "username": "TEST_divm_1297f1",
+        "hashed_password": "$2b$12$4Scx5kMTqxSTqHEiqx8dl.zt6X3qmEpeF7LAJLlur86X6Mu.ATCQq",
+        "full_name": "Div Manager",
+        "role": "division_manager",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "6e5b5f50-dd8a-4a8b-ac85-0ec33a13856e",
+        "created_by": "fbc4cd03-4449-4018-99a4-3f63ac9d8bd1",
+        "created_at": "2026-07-02T16:27:43.848472+00:00"
+      },
+      {
+        "id": "9046650c-badd-4e2a-911b-0eeb04322a97",
+        "username": "TEST_emp_536fa7",
+        "hashed_password": "$2b$12$negu3x87q5tI2bUM3RU7merdaAiPrMJw.6l53/imFl1OkfoollA2q",
+        "full_name": "Self Named",
+        "role": "employee",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "division_id": "6e5b5f50-dd8a-4a8b-ac85-0ec33a13856e",
+        "created_by": "2c323014-7236-4cc6-870f-02cbd261ca8d",
+        "created_at": "2026-07-02T16:27:44.576396+00:00"
+      },
+      {
+        "id": "9e120e48-2dec-48a1-9cb1-e06406ac1cba",
+        "username": "TEST_divscope_dma_9f963f",
+        "hashed_password": "$2b$12$ZQIKZlCoSDC9nQHKny0.gOIHxQ2qxt0p6YZeiSgckPLGH0RGL3SAu",
+        "full_name": "Divm A",
+        "role": "division_manager",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "division_id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "created_by": "f04280e6-a96c-43c0-bb84-0780eb9d5cc3",
+        "created_at": "2026-07-02T16:28:12.052351+00:00"
+      },
+      {
+        "id": "02165012-2ab7-4fb0-b492-ad29b6de6f43",
+        "username": "TEST_divscope_dmb_9f963f",
+        "hashed_password": "$2b$12$WmNHCSlJQAxWCRnS8cWEfeX90ZGsGvxOYogFka6z2Sjlo4m0TfcKa",
+        "full_name": "Divm B",
+        "role": "division_manager",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "division_id": "c85a80e3-cb5a-4c21-8716-462039464132",
+        "created_by": "f04280e6-a96c-43c0-bb84-0780eb9d5cc3",
+        "created_at": "2026-07-02T16:28:12.767157+00:00"
+      },
+      {
+        "id": "b60911d3-83f0-4cb2-a4f2-623b9f7f1b8b",
+        "username": "TEST_divscope_e1_9f963f",
+        "hashed_password": "$2b$12$8mXnUA8rXnLm9ZHhC6yZu.HUXkNwJgfQ2EyVlOMCFWkph9ItvCWCS",
+        "full_name": "Emp E1",
+        "role": "employee",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "division_id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "created_by": "9e120e48-2dec-48a1-9cb1-e06406ac1cba",
+        "created_at": "2026-07-02T16:28:13.432569+00:00"
+      },
+      {
+        "id": "6322dd7f-cf98-44ad-9ae9-9f3c5fbb8985",
+        "username": "TEST_divscope_e2_9f963f",
+        "hashed_password": "$2b$12$Gi50H6FkvxxoEYaKeNEAweJJQDCubLJGFk.MFv21sFmqmk7r0/Nwm",
+        "full_name": "Emp E2",
+        "role": "employee",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "division_id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "created_by": "9e120e48-2dec-48a1-9cb1-e06406ac1cba",
+        "created_at": "2026-07-02T16:28:14.070167+00:00"
+      },
+      {
+        "id": "467e6f8b-cc6d-4954-89ca-ad965e455fe6",
+        "username": "TEST_divscope_e3_9f963f",
+        "hashed_password": "$2b$12$8mSPoQyOzCx71fHB.wkgU.0wglnFIMcDAFWrgfCAb28hTZEGDcf3q",
+        "full_name": "Emp E3",
+        "role": "employee",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "division_id": "c85a80e3-cb5a-4c21-8716-462039464132",
+        "created_by": "02165012-2ab7-4fb0-b492-ad29b6de6f43",
+        "created_at": "2026-07-02T16:28:14.713879+00:00"
+      }
+    ],
+    "departments": [
+      {
+        "id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "name": "قسم الحركة الجوية",
+        "created_at": "2026-07-01T07:15:45.930333+00:00"
+      },
+      {
+        "id": "7c760691-b444-457c-98ad-8aaaabd05aa4",
+        "name": "قسم السلامة والتراخيص",
+        "created_at": "2026-07-01T07:15:45.941803+00:00"
+      },
+      {
+        "id": "7c1d1f99-d90c-442f-8b4a-3f7e671ea27c",
+        "name": "قسم الاتصالات",
+        "created_at": "2026-07-01T07:15:45.942260+00:00"
+      },
+      {
+        "id": "fff73a76-b647-41c3-b1ff-79cc92eb24cb",
+        "name": "قسم  الموارد البشرية",
+        "created_at": "2026-07-01T07:15:45.942547+00:00"
+      },
+      {
+        "id": "47e27014-0dee-497a-a00e-2343b01c13da",
+        "name": "قسم التدقيق",
+        "created_at": "2026-07-01T07:15:45.942790+00:00"
+      },
+      {
+        "id": "476a70a3-da88-49f1-a248-9d7f8d52bcd4",
+        "name": "قسم القانوني",
+        "created_at": "2026-07-01T07:26:19.150382+00:00"
+      },
+      {
+        "id": "d9228310-ce67-40fb-aea0-73d28b66a16a",
+        "name": "قسم المالي",
+        "created_at": "2026-07-01T07:28:04.756465+00:00"
+      },
+      {
+        "id": "e94e11e4-67e2-4453-b9a8-5edea13a96dd",
+        "name": "قسم الخطيط",
+        "created_at": "2026-07-01T07:31:51.775122+00:00"
+      },
+      {
+        "id": "982c8f46-ca97-43a7-b068-058d0eca6f2d",
+        "name": "قسم الفني",
+        "created_at": "2026-07-01T09:17:01.858544+00:00"
+      },
+      {
+        "id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "name": "IT",
+        "created_at": "2026-07-01T09:20:18.147465+00:00"
+      },
+      {
+        "id": "6d6c7089-99b1-4995-9c08-1efd29a1f990",
+        "name": "قسم معلومات الطيران",
+        "created_at": "2026-07-01T10:15:15.088323+00:00"
+      },
+      {
+        "id": "b989433c-bb00-47ac-83c5-043d6d73c981",
+        "name": "قسم التدريب",
+        "created_at": "2026-07-01T10:15:19.939165+00:00"
+      },
+      {
+        "id": "48d7ebc5-760b-4a84-a9e6-0b86ff0fb754",
+        "name": "قسم الجودة",
+        "created_at": "2026-07-01T10:15:58.887265+00:00"
+      },
+      {
+        "id": "b526e662-6143-420a-96d2-b333e54be6ce",
+        "name": "قسم الاعلام",
+        "created_at": "2026-07-01T10:30:44.627727+00:00"
+      },
+      {
+        "id": "86dcab2a-bdcc-4c47-a8d5-088131a107c1",
+        "name": "تمكين المراة",
+        "created_at": "2026-07-01T10:30:49.508787+00:00"
+      },
+      {
+        "id": "856379c7-ebc7-4227-8099-f76ab400e42d",
+        "name": "TEST_other_957a1",
+        "created_at": "2026-07-01T10:38:45.743665+00:00"
+      },
+      {
+        "id": "a2c3cdfa-56a1-461f-9e63-e1cb3490087b",
+        "name": "TEST_other_20bb8",
+        "created_at": "2026-07-01T11:23:07.854215+00:00"
+      },
+      {
+        "id": "94428199-09aa-4a10-ac06-621937d74047",
+        "name": "TEST_other_844dd",
+        "created_at": "2026-07-01T11:24:01.616329+00:00"
+      },
+      {
+        "id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "name": "TEST_dept_77b705",
+        "created_at": "2026-07-02T06:24:39.132296+00:00"
+      },
+      {
+        "id": "5705ae53-3ba2-4dfa-a7d5-94458c144b35",
+        "name": "TEST_other_8cba5",
+        "created_at": "2026-07-02T06:24:47.556563+00:00"
+      },
+      {
+        "id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "name": "TEST_dept_276895",
+        "created_at": "2026-07-02T09:02:39.274738+00:00"
+      },
+      {
+        "id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "name": "TEST_del_dept_e89104",
+        "created_at": "2026-07-02T09:02:42.384456+00:00"
+      },
+      {
+        "id": "b4249e13-2f95-4219-a156-74867be99183",
+        "name": "TEST_other_4d816",
+        "created_at": "2026-07-02T09:02:54.492906+00:00"
+      },
+      {
+        "id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "name": "TEST_del_dept_91d592",
+        "created_at": "2026-07-02T09:04:04.818899+00:00"
+      },
+      {
+        "id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "name": "TEST_dept_654cc0",
+        "created_at": "2026-07-02T09:07:30.774186+00:00"
+      },
+      {
+        "id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "name": "TEST_del_dept_74d070",
+        "created_at": "2026-07-02T09:07:33.696921+00:00"
+      },
+      {
+        "id": "ff204b66-1a58-4cd9-9b39-bb33aef4cfc9",
+        "name": "TEST_other_77632",
+        "created_at": "2026-07-02T09:07:45.545594+00:00"
+      },
+      {
+        "id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "name": "TEST_dept_bbd132",
+        "created_at": "2026-07-02T14:43:02.532996+00:00"
+      },
+      {
+        "id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "name": "TEST_del_dept_fb90df",
+        "created_at": "2026-07-02T14:43:05.696098+00:00"
+      },
+      {
+        "id": "058c2236-af7a-4427-a4f1-a9b550758e2a",
+        "name": "TEST_dept_5c8a44_upd",
+        "created_at": "2026-07-02T14:43:13.451154+00:00"
+      },
+      {
+        "id": "a0fcacdb-12cc-486a-80c1-ff4fb17e9236",
+        "name": "TEST_other_42c15",
+        "created_at": "2026-07-02T14:43:18.347293+00:00"
+      },
+      {
+        "id": "96d395bc-9105-41fc-bb08-beb729ce5a3c",
+        "name": "TEST_empty_eeb036",
+        "created_at": "2026-07-02T14:44:15.066986+00:00"
+      },
+      {
+        "id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "name": "TEST_dept_47e277",
+        "created_at": "2026-07-02T15:48:15.421722+00:00"
+      },
+      {
+        "id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "name": "TEST_del_dept_b44f7f",
+        "created_at": "2026-07-02T15:48:18.537514+00:00"
+      },
+      {
+        "id": "8e9196df-4376-419a-8e3a-af5eb0f1f9e3",
+        "name": "TEST_dept_fd625f_upd",
+        "created_at": "2026-07-02T15:49:25.762266+00:00"
+      },
+      {
+        "id": "4c7972fd-57a0-40f1-87b3-d1d93f572714",
+        "name": "TEST_other_e835c",
+        "created_at": "2026-07-02T15:49:30.802745+00:00"
+      },
+      {
+        "id": "48355e6d-ef15-4ed8-8c0d-3f3b1a31b0c5",
+        "name": "TEST_empty_c0da8d",
+        "created_at": "2026-07-02T15:49:35.372491+00:00"
+      },
+      {
+        "id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "name": "TEST_dept_e35dcf",
+        "created_at": "2026-07-02T16:01:48.664807+00:00"
+      },
+      {
+        "id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "name": "TEST_del_dept_f43117",
+        "created_at": "2026-07-02T16:01:51.798010+00:00"
+      },
+      {
+        "id": "0ef8550e-0cd6-4cc4-9cdc-1d762277bb81",
+        "name": "TEST_dept_6c1b98_upd",
+        "created_at": "2026-07-02T16:01:59.863621+00:00"
+      },
+      {
+        "id": "ff4a02e8-af9d-4a99-a8d3-5404d8a546fa",
+        "name": "TEST_other_4dc17",
+        "created_at": "2026-07-02T16:03:04.929006+00:00"
+      },
+      {
+        "id": "827f8fc3-dacf-4a78-97b1-4c230491d767",
+        "name": "TEST_empty_1e53c9",
+        "created_at": "2026-07-02T16:03:08.501109+00:00"
+      },
+      {
+        "id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "name": "TEST_dept_463f76",
+        "created_at": "2026-07-02T16:24:21.714198+00:00"
+      },
+      {
+        "id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "name": "TEST_del_dept_32ca57",
+        "created_at": "2026-07-02T16:24:24.919393+00:00"
+      },
+      {
+        "id": "429690db-1939-49ff-b929-e25e87edc907",
+        "name": "TEST_dept_e73ba6_upd",
+        "created_at": "2026-07-02T16:24:32.698381+00:00"
+      },
+      {
+        "id": "454204df-07bc-4df4-a9c4-cb1c0b757c69",
+        "name": "TEST_other_f5256",
+        "created_at": "2026-07-02T16:24:37.613667+00:00"
+      },
+      {
+        "id": "a54e8e64-0d90-4afe-afe6-2c14acccc24e",
+        "name": "TEST_empty_b008e1",
+        "created_at": "2026-07-02T16:25:21.409918+00:00"
+      },
+      {
+        "id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "name": "TEST_divscope_X_289b07",
+        "created_at": "2026-07-02T16:26:51.321147+00:00"
+      },
+      {
+        "id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "name": "TEST_dept_ecbe94",
+        "created_at": "2026-07-02T16:27:09.479043+00:00"
+      },
+      {
+        "id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "name": "TEST_del_dept_30d2bc",
+        "created_at": "2026-07-02T16:27:13.088449+00:00"
+      },
+      {
+        "id": "addffa67-276e-423d-a2d9-a72b79497d8f",
+        "name": "TEST_dept_d0a5fd_upd",
+        "created_at": "2026-07-02T16:27:42.379664+00:00"
+      },
+      {
+        "id": "4fa43af0-8195-46e3-b1e1-a3dbd82ac44c",
+        "name": "TEST_other_3fc81",
+        "created_at": "2026-07-02T16:27:47.191940+00:00"
+      },
+      {
+        "id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "name": "TEST_divscope_X_9f963f",
+        "created_at": "2026-07-02T16:28:10.880360+00:00"
+      },
+      {
+        "id": "9f286fbe-887d-42d5-af53-172b19a91822",
+        "name": "TEST_empty_cd2c16",
+        "created_at": "2026-07-02T16:28:31.295560+00:00"
+      }
+    ],
+    "divisions": [
+      {
+        "id": "a82cdf7f-1cee-4e4f-9f58-349cfe6a85d5",
+        "name": "TEST_div_ui_232",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T07:26:20.336707+00:00"
+      },
+      {
+        "id": "30730967-1124-4111-bddd-40dbe5e090c7",
+        "name": "TEST_div_be196",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T09:17:03.033811+00:00"
+      },
+      {
+        "id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "name": "الصيانة والشبكات",
+        "department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "created_at": "2026-07-01T09:21:44.882539+00:00"
+      },
+      {
+        "id": "aba812c3-e943-48e3-b48d-0202292c7375",
+        "name": "TEST_div_dc893_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T10:15:16.296113+00:00"
+      },
+      {
+        "id": "c0683baf-d691-43be-ad06-ffd200b90aa2",
+        "name": "TEST_odiv",
+        "department_id": "b989433c-bb00-47ac-83c5-043d6d73c981",
+        "created_at": "2026-07-01T10:15:20.038196+00:00"
+      },
+      {
+        "id": "df24c10d-90da-4204-8d0f-fb8e9c1b472b",
+        "name": "TEST_div_e6ff8_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T10:30:45.760159+00:00"
+      },
+      {
+        "id": "53b77f97-c265-424e-b8b5-90f56d82abb3",
+        "name": "TEST_odiv",
+        "department_id": "86dcab2a-bdcc-4c47-a8d5-088131a107c1",
+        "created_at": "2026-07-01T10:30:49.596594+00:00"
+      },
+      {
+        "id": "907ce211-a93c-4353-a410-972397d476d6",
+        "name": "TEST_div_8ac35_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T10:38:42.165433+00:00"
+      },
+      {
+        "id": "e9342e67-8daa-4461-8872-c8c84c5a99c9",
+        "name": "TEST_odiv",
+        "department_id": "856379c7-ebc7-4227-8099-f76ab400e42d",
+        "created_at": "2026-07-01T10:38:45.839173+00:00"
+      },
+      {
+        "id": "74f7d3f0-115a-474c-bb21-759d7f5d8b64",
+        "name": "TEST_div_1a03f_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T11:23:04.185451+00:00"
+      },
+      {
+        "id": "facbb6ea-35cf-486b-8abe-2c133d0ae36e",
+        "name": "TEST_odiv",
+        "department_id": "a2c3cdfa-56a1-461f-9e63-e1cb3490087b",
+        "created_at": "2026-07-01T11:23:07.946146+00:00"
+      },
+      {
+        "id": "89c71174-c886-4f5c-85a1-a70450c926e2",
+        "name": "TEST_div_c96a6_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-01T11:23:58.127977+00:00"
+      },
+      {
+        "id": "5aa01ca9-2187-48e8-91e7-1890ff7087c8",
+        "name": "TEST_odiv",
+        "department_id": "94428199-09aa-4a10-ac06-621937d74047",
+        "created_at": "2026-07-01T11:24:01.706574+00:00"
+      },
+      {
+        "id": "8bdcedcf-0ea5-438d-9f19-242bb9173672",
+        "name": "TEST_div_77b705",
+        "department_id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "created_at": "2026-07-02T06:24:39.885055+00:00"
+      },
+      {
+        "id": "1c1c9e58-2b72-4039-a2b9-1d1463e6985e",
+        "name": "TEST_div_23118_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T06:24:44.023425+00:00"
+      },
+      {
+        "id": "1c23df36-6aae-4e8b-b68f-95e8e5cc6fff",
+        "name": "TEST_odiv",
+        "department_id": "5705ae53-3ba2-4dfa-a7d5-94458c144b35",
+        "created_at": "2026-07-02T06:24:47.650088+00:00"
+      },
+      {
+        "id": "e9eeaf3d-e0e2-4fd2-abda-9b52dd508440",
+        "name": "TEST_div_276895",
+        "department_id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "created_at": "2026-07-02T09:02:40.041831+00:00"
+      },
+      {
+        "id": "095af1c9-1348-46c3-8fb5-ccb4c5b429c7",
+        "name": "TEST_del_div_42a2e",
+        "department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "created_at": "2026-07-02T09:02:42.482860+00:00"
+      },
+      {
+        "id": "4aee7466-3694-48b3-b5f8-f6106b445b3b",
+        "name": "TEST_div_32d08_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T09:02:51.029480+00:00"
+      },
+      {
+        "id": "9217a360-d867-4d7f-abc5-0d896bcfbb22",
+        "name": "TEST_odiv",
+        "department_id": "b4249e13-2f95-4219-a156-74867be99183",
+        "created_at": "2026-07-02T09:02:54.613340+00:00"
+      },
+      {
+        "id": "1a2dda76-4543-4fec-8908-ffac5adb6286",
+        "name": "TEST_del_div_11cea",
+        "department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "created_at": "2026-07-02T09:04:04.918400+00:00"
+      },
+      {
+        "id": "e37ea236-f777-46fa-b834-df3f463dc2f4",
+        "name": "TEST_div_654cc0",
+        "department_id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "created_at": "2026-07-02T09:07:31.501751+00:00"
+      },
+      {
+        "id": "7114f88e-a20e-4aea-81aa-bf3e29884959",
+        "name": "TEST_del_div_0f556",
+        "department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "created_at": "2026-07-02T09:07:33.790747+00:00"
+      },
+      {
+        "id": "921a07c2-6398-42de-8ce7-c4836411648f",
+        "name": "TEST_div_8e4df_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T09:07:42.084471+00:00"
+      },
+      {
+        "id": "0e9e27a5-9c11-48f2-8091-028a80892c44",
+        "name": "TEST_odiv",
+        "department_id": "ff204b66-1a58-4cd9-9b39-bb33aef4cfc9",
+        "created_at": "2026-07-02T09:07:45.637509+00:00"
+      },
+      {
+        "id": "ba399e8d-b50e-4226-b91e-e437260a6d94",
+        "name": "البريد الإلكتروني",
+        "department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "created_at": "2026-07-02T09:27:59.163465+00:00"
+      },
+      {
+        "id": "fab33186-59ec-4f34-8bdf-3db60753e21a",
+        "name": "TEST_div_bbd132",
+        "department_id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "created_at": "2026-07-02T14:43:03.323954+00:00"
+      },
+      {
+        "id": "d4516dec-30fa-4641-bb0b-01b96754ee63",
+        "name": "TEST_del_div_643aa",
+        "department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "created_at": "2026-07-02T14:43:05.789055+00:00"
+      },
+      {
+        "id": "f58b601a-21c5-4d87-9fd2-a290891d3d4e",
+        "name": "TEST_div_2de57_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T14:43:14.668423+00:00"
+      },
+      {
+        "id": "b240e81f-5cbf-45e1-acbb-149b182fe247",
+        "name": "TEST_odiv",
+        "department_id": "a0fcacdb-12cc-486a-80c1-ff4fb17e9236",
+        "created_at": "2026-07-02T14:43:18.479021+00:00"
+      },
+      {
+        "id": "27a19e16-c60b-43b3-9f9b-5e68af84a7ae",
+        "name": "TEST_div_47e277",
+        "department_id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "created_at": "2026-07-02T15:48:16.184107+00:00"
+      },
+      {
+        "id": "ecdbf665-a6b8-4985-a4be-3f7667bc6408",
+        "name": "TEST_del_div_958d5",
+        "department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "created_at": "2026-07-02T15:48:18.645542+00:00"
+      },
+      {
+        "id": "f38be6cf-e6d9-42da-adab-d085e5c13a23",
+        "name": "TEST_div_d6547_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T15:49:26.961946+00:00"
+      },
+      {
+        "id": "90e4a302-3400-4452-bb31-bc1c5912e231",
+        "name": "TEST_odiv",
+        "department_id": "4c7972fd-57a0-40f1-87b3-d1d93f572714",
+        "created_at": "2026-07-02T15:49:30.911239+00:00"
+      },
+      {
+        "id": "b1543410-e550-417f-aca7-127f3f3c4167",
+        "name": "TEST_div_e35dcf",
+        "department_id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "created_at": "2026-07-02T16:01:49.483153+00:00"
+      },
+      {
+        "id": "9947ee0f-3da3-4873-88f1-3ae5fdc5b208",
+        "name": "TEST_del_div_9c7be",
+        "department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "created_at": "2026-07-02T16:01:51.899512+00:00"
+      },
+      {
+        "id": "71e0396a-3107-4b4f-99f7-23259b0e5658",
+        "name": "TEST_div_c25c7_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T16:02:01.033499+00:00"
+      },
+      {
+        "id": "e220a0e9-109f-44d8-b29d-05e3c4838db8",
+        "name": "TEST_odiv",
+        "department_id": "ff4a02e8-af9d-4a99-a8d3-5404d8a546fa",
+        "created_at": "2026-07-02T16:03:05.034448+00:00"
+      },
+      {
+        "id": "9d3714e3-0033-48eb-ab23-94bbda3b6acf",
+        "name": "TEST_div_463f76",
+        "department_id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "created_at": "2026-07-02T16:24:22.536335+00:00"
+      },
+      {
+        "id": "7e4e49cf-ec01-4d00-8c00-47d29b20a085",
+        "name": "TEST_del_div_e9aff",
+        "department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "created_at": "2026-07-02T16:24:25.010392+00:00"
+      },
+      {
+        "id": "425737cd-5b6d-4c36-96c0-0581ab3d513d",
+        "name": "TEST_div_9f392_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T16:24:33.883716+00:00"
+      },
+      {
+        "id": "976a0a54-f11f-4245-88b7-eb7fe200742b",
+        "name": "TEST_odiv",
+        "department_id": "454204df-07bc-4df4-a9c4-cb1c0b757c69",
+        "created_at": "2026-07-02T16:24:37.720285+00:00"
+      },
+      {
+        "id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "name": "TEST_divscope_A_289b07",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "created_at": "2026-07-02T16:26:52.097545+00:00"
+      },
+      {
+        "id": "9ad0d0f7-7b52-4984-b239-6997df22cbf6",
+        "name": "TEST_divscope_B_289b07",
+        "department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "created_at": "2026-07-02T16:26:52.209894+00:00"
+      },
+      {
+        "id": "9541b460-8c6c-49e5-a552-7719fe7029bd",
+        "name": "TEST_div_ecbe94",
+        "department_id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "created_at": "2026-07-02T16:27:10.377842+00:00"
+      },
+      {
+        "id": "3ca77de4-1067-4761-9901-c9882e031a01",
+        "name": "TEST_del_div_f33a8",
+        "department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "created_at": "2026-07-02T16:27:13.221394+00:00"
+      },
+      {
+        "id": "6e5b5f50-dd8a-4a8b-ac85-0ec33a13856e",
+        "name": "TEST_div_c1e7c_dm",
+        "department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "created_at": "2026-07-02T16:27:43.526957+00:00"
+      },
+      {
+        "id": "cbeef905-3eb6-448b-a3b8-ec51aff6fde1",
+        "name": "TEST_odiv",
+        "department_id": "4fa43af0-8195-46e3-b1e1-a3dbd82ac44c",
+        "created_at": "2026-07-02T16:27:47.326899+00:00"
+      },
+      {
+        "id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "name": "TEST_divscope_A_9f963f",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "created_at": "2026-07-02T16:28:11.629636+00:00"
+      },
+      {
+        "id": "c85a80e3-cb5a-4c21-8716-462039464132",
+        "name": "TEST_divscope_B_9f963f",
+        "department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "created_at": "2026-07-02T16:28:11.729560+00:00"
+      }
+    ],
+    "activities": [
+      {
+        "id": "85525c46-bc0c-4c97-95b8-225abad7f202",
+        "employee_id": "cfb455b4-08cb-4d4f-8458-7504bca276bf",
+        "employee_name": "Employee",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_division_id": "a82cdf7f-1cee-4e4f-9f58-349cfe6a85d5",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T07:26:22.032578+00:00",
+        "history": [
+          {
+            "by": "cfb455b4-08cb-4d4f-8458-7504bca276bf",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T07:26:22.032585+00:00"
+          },
+          {
+            "by": "c4d8bc78-a14a-4ee1-ac2a-f2ec744d5ead",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T07:26:22.229574+00:00"
+          },
+          {
+            "by": "fe9edafa-ed5a-4fd4-8cb8-75badc6fda9b",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T07:26:22.325105+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T07:26:22.479738+00:00"
+          }
+        ],
+        "rejection_reason": null,
+        "employee_department_name": "قسم الحركة الجوية"
+      },
+      {
+        "id": "c89478bd-51d1-496b-9796-1d779f4e84dc",
+        "employee_id": "d335e871-65a1-41d0-bf53-c1af03868567",
+        "employee_name": "Employee",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_division_id": "30730967-1124-4111-bddd-40dbe5e090c7",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T09:17:04.674719+00:00",
+        "history": [
+          {
+            "by": "d335e871-65a1-41d0-bf53-c1af03868567",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T09:17:04.674726+00:00"
+          },
+          {
+            "by": "249cdedc-5e98-4197-986a-3ce6253a28a0",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T09:17:04.858879+00:00"
+          },
+          {
+            "by": "96da2698-5335-4c3b-aa3c-1d77b6f2713c",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T09:17:04.955498+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T09:17:05.050335+00:00"
+          }
+        ],
+        "rejection_reason": null,
+        "employee_department_name": "قسم الحركة الجوية"
+      },
+      {
+        "id": "4773da74-28b3-4191-9a52-ad22c6ce08a6",
+        "employee_id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "employee_name": "Ss",
+        "employee_department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "employee_division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "activity_date": "2026-07-01",
+        "activity_type": "تنصيب حاسبة",
+        "target_department_id": "7c760691-b444-457c-98ad-8aaaabd05aa4",
+        "target_department_name": "قسم السلامة والتراخيص",
+        "notes": "",
+        "status": "approved",
+        "created_at": "2026-07-01T09:30:02.762877+00:00",
+        "history": [
+          {
+            "by": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+            "by_name": "Ss",
+            "action": "created",
+            "at": "2026-07-01T09:30:02.762884+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T09:30:49.068838+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T09:32:34.898015+00:00"
+          }
+        ],
+        "rejection_reason": null,
+        "employee_department_name": "IT"
+      },
+      {
+        "id": "cc286fe8-f9e8-4845-ba1c-f57432ed0c03",
+        "employee_id": "9d5d9523-4980-4aba-8177-87267862ecff",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_division_id": "aba812c3-e943-48e3-b48d-0202292c7375",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T10:15:18.009145+00:00",
+        "history": [
+          {
+            "by": "9d5d9523-4980-4aba-8177-87267862ecff",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T10:15:18.009154+00:00"
+          },
+          {
+            "by": "afd041f7-78a9-4618-97d9-c5d159e95da8",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:15:18.205906+00:00"
+          },
+          {
+            "by": "49a7313c-7d19-491b-ae1c-68facb11eacf",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:15:18.302916+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:15:18.397530+00:00"
+          }
+        ],
+        "rejection_reason": null,
+        "employee_department_name": "قسم الحركة الجوية"
+      },
+      {
+        "id": "79f94dac-472e-449a-a833-fd787e689487",
+        "employee_id": "d759440c-aa25-424e-a95a-da94cc957656",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "df24c10d-90da-4204-8d0f-fb8e9c1b472b",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T10:30:47.454258+00:00",
+        "history": [
+          {
+            "by": "d759440c-aa25-424e-a95a-da94cc957656",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T10:30:47.454266+00:00"
+          },
+          {
+            "by": "2d1dc02a-4fc4-46cd-94f0-fd247faee95f",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:30:47.674064+00:00"
+          },
+          {
+            "by": "6d86ff35-61b8-497d-bb9d-7fe7c01a5bd2",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:30:47.770851+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:30:47.864804+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "67b01c63-0b5f-4d60-bbeb-a1afa40f4d30",
+        "employee_id": "d759440c-aa25-424e-a95a-da94cc957656",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "df24c10d-90da-4204-8d0f-fb8e9c1b472b",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-01T10:30:51.853825+00:00",
+        "history": [
+          {
+            "by": "d759440c-aa25-424e-a95a-da94cc957656",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-01T10:30:51.853832+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "d7898c8d-9684-4951-8c08-a2eb0d4423d7",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-01T10:30:52.323084+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-01T10:30:52.323091+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "11aab7ac-b085-4820-ab75-1eb4c681d452",
+        "employee_id": "953c5df1-fbd6-4747-b6af-9d24910aa423",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "907ce211-a93c-4353-a410-972397d476d6",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T10:38:43.840711+00:00",
+        "history": [
+          {
+            "by": "953c5df1-fbd6-4747-b6af-9d24910aa423",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T10:38:43.840719+00:00"
+          },
+          {
+            "by": "5cb3b554-4577-4b35-aee2-908ec567e637",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:38:44.037436+00:00"
+          },
+          {
+            "by": "489d91e5-3550-4d44-ac47-babcf60eb1eb",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:38:44.141744+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:38:44.237292+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "9d3e9c9e-0541-40e3-a826-d09aab2b6557",
+        "employee_id": "953c5df1-fbd6-4747-b6af-9d24910aa423",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "907ce211-a93c-4353-a410-972397d476d6",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-01T10:38:48.093785+00:00",
+        "history": [
+          {
+            "by": "953c5df1-fbd6-4747-b6af-9d24910aa423",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-01T10:38:48.093792+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "35239c4c-4595-4fd1-93ef-5bacd9f3d901",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-01T10:38:48.574077+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-01T10:38:48.574084+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "e02e938a-ec67-410c-a15d-94856ebaec1d",
+        "employee_id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "employee_name": "Ss",
+        "employee_department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "employee_department_name": "IT",
+        "employee_division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "activity_date": "2026-07-01",
+        "activity_type": "طابعة",
+        "target_department_id": "fff73a76-b647-41c3-b1ff-79cc92eb24cb",
+        "target_department_name": "قسم  الموارد البشرية",
+        "notes": "",
+        "status": "approved",
+        "created_at": "2026-07-01T10:51:54.750444+00:00",
+        "history": [
+          {
+            "by": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+            "by_name": "Ss",
+            "action": "created",
+            "at": "2026-07-01T10:51:54.750451+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:54:17.221487+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:58:10.526373+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "76f996ac-9aa3-4d31-890c-c57879de22ec",
+        "employee_id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "employee_name": "Ss",
+        "employee_department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "employee_department_name": "IT",
+        "employee_division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "activity_date": "2026-07-01",
+        "activity_type": "استنساخ",
+        "target_department_id": "47e27014-0dee-497a-a00e-2343b01c13da",
+        "target_department_name": "قسم التدقيق",
+        "notes": "مذكرة رقم 1",
+        "status": "approved",
+        "created_at": "2026-07-01T10:52:17.448161+00:00",
+        "history": [
+          {
+            "by": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+            "by_name": "Ss",
+            "action": "created",
+            "at": "2026-07-01T10:52:17.448168+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "edit",
+            "reason": null,
+            "at": "2026-07-01T10:54:11.253425+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:54:21.154197+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T10:58:04.580567+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "e9d562a8-31a3-4f65-86ce-f205a0c38bd2",
+        "employee_id": "4d5ff168-b1b5-420f-a000-b282a351b593",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "74f7d3f0-115a-474c-bb21-759d7f5d8b64",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T11:23:05.890176+00:00",
+        "history": [
+          {
+            "by": "4d5ff168-b1b5-420f-a000-b282a351b593",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T11:23:05.890183+00:00"
+          },
+          {
+            "by": "e84dccb1-6fd8-4806-ba04-0213c5236f38",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:23:06.161754+00:00"
+          },
+          {
+            "by": "7ab09604-c044-4cc9-92fc-1ac04531bea9",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:23:06.262652+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:23:06.408078+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "c70d66c4-feff-4435-aef6-8c0d07a7da20",
+        "employee_id": "4d5ff168-b1b5-420f-a000-b282a351b593",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "74f7d3f0-115a-474c-bb21-759d7f5d8b64",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-01T11:23:10.222537+00:00",
+        "history": [
+          {
+            "by": "4d5ff168-b1b5-420f-a000-b282a351b593",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-01T11:23:10.222544+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "4158d398-ddd3-4ee6-908c-39862e74f32b",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-01T11:23:10.694739+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-01T11:23:10.694746+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "ccfb3437-61d3-41c8-bb4f-de307f1dd05b",
+        "employee_id": "16ab05da-0696-4b6c-965c-cae7d10f44f8",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "89c71174-c886-4f5c-85a1-a70450c926e2",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-01T11:23:59.772729+00:00",
+        "history": [
+          {
+            "by": "16ab05da-0696-4b6c-965c-cae7d10f44f8",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-01T11:23:59.772737+00:00"
+          },
+          {
+            "by": "1da6ffe6-8765-4f9c-b2a4-70185744ba4e",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:23:59.965033+00:00"
+          },
+          {
+            "by": "85bd41de-b6a0-4fa9-855a-a2705dcec08a",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:24:00.059827+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-01T11:24:00.161687+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "e595c747-8b87-4d83-9227-739dfb57a92f",
+        "employee_id": "16ab05da-0696-4b6c-965c-cae7d10f44f8",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "89c71174-c886-4f5c-85a1-a70450c926e2",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-01T11:24:03.970957+00:00",
+        "history": [
+          {
+            "by": "16ab05da-0696-4b6c-965c-cae7d10f44f8",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-01T11:24:03.970965+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "30294844-d3cb-4d59-85ea-6fa3cc9a93b9",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-01T11:24:04.484134+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-01T11:24:04.484144+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "05e0b8f1-e7c8-4d56-bcbe-563bacb035dd",
+        "employee_id": "6abfc69f-8585-4012-bff8-bfad2d31fcda",
+        "employee_name": "Test Emp",
+        "employee_department_id": "5523357b-c5bc-47bf-b3d9-a9ab6bfac621",
+        "employee_department_name": "TEST_dept_77b705",
+        "employee_division_id": "8bdcedcf-0ea5-438d-9f19-242bb9173672",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T06:24:41.381463+00:00",
+        "history": [
+          {
+            "by": "6abfc69f-8585-4012-bff8-bfad2d31fcda",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T06:24:41.381469+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "272fb2d5-1ff7-406a-85ba-e9f60150daff",
+        "employee_id": "753d6694-8ba0-40a7-b0aa-8014ac90dc1d",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "1c1c9e58-2b72-4039-a2b9-1d1463e6985e",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T06:24:45.683756+00:00",
+        "history": [
+          {
+            "by": "753d6694-8ba0-40a7-b0aa-8014ac90dc1d",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T06:24:45.683763+00:00"
+          },
+          {
+            "by": "f8e8b994-2ad2-4c4f-84d8-4f933fcd6372",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T06:24:45.877179+00:00"
+          },
+          {
+            "by": "1d5eadff-f3ff-4d06-9939-f5dbe7ec14ce",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T06:24:45.969468+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T06:24:46.074583+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "c845c2c8-4ab7-4648-bfa7-68ab5b1b8265",
+        "employee_id": "753d6694-8ba0-40a7-b0aa-8014ac90dc1d",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "1c1c9e58-2b72-4039-a2b9-1d1463e6985e",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T06:24:49.908130+00:00",
+        "history": [
+          {
+            "by": "753d6694-8ba0-40a7-b0aa-8014ac90dc1d",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T06:24:49.908137+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "be695641-93f3-4b9d-8a7f-7ab42de16ac1",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T06:24:50.391895+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T06:24:50.391902+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "b1adf956-7ee7-4181-bdbe-8551b95adbb3",
+        "employee_id": "06956d4e-abfe-4f54-b7ce-7859c5576e7c",
+        "employee_name": "Test Emp",
+        "employee_department_id": "21a2a9ec-8359-40c9-a15a-2b96877879a9",
+        "employee_department_name": "TEST_dept_276895",
+        "employee_division_id": "e9eeaf3d-e0e2-4fd2-abda-9b52dd508440",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:02:41.608565+00:00",
+        "history": [
+          {
+            "by": "06956d4e-abfe-4f54-b7ce-7859c5576e7c",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T09:02:41.608579+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "68f501fe-1917-4c64-9a0b-be6b138cd391",
+        "employee_id": "bba59a3e-a6fd-48fb-8916-6e451b40b7b5",
+        "employee_name": "Del Emp",
+        "employee_department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "employee_department_name": "TEST_del_dept_e89104",
+        "employee_division_id": "095af1c9-1348-46c3-8fb5-ccb4c5b429c7",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "9ce4205d-d176-4043-bf1a-2742dc805e70",
+        "target_department_name": "TEST_del_dept_e89104",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:02:44.537221+00:00",
+        "history": [
+          {
+            "by": "bba59a3e-a6fd-48fb-8916-6e451b40b7b5",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T09:02:44.537229+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "de1cd459-e7a1-4ba8-8183-7bf009ea2192",
+        "employee_id": "ac675d4b-f996-4df7-844d-f0439f23e60e",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "4aee7466-3694-48b3-b5f8-f6106b445b3b",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T09:02:52.675559+00:00",
+        "history": [
+          {
+            "by": "ac675d4b-f996-4df7-844d-f0439f23e60e",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T09:02:52.675568+00:00"
+          },
+          {
+            "by": "446b4c8e-6054-4689-8e3a-b5bc06c28859",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:02:52.868225+00:00"
+          },
+          {
+            "by": "047af6c8-25ec-42e3-b439-97eb2ac4a6ff",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:02:52.963340+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:02:53.060274+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "6631bd2f-9e4f-4c50-891d-79f5bd436d18",
+        "employee_id": "ac675d4b-f996-4df7-844d-f0439f23e60e",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "4aee7466-3694-48b3-b5f8-f6106b445b3b",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:02:56.836650+00:00",
+        "history": [
+          {
+            "by": "ac675d4b-f996-4df7-844d-f0439f23e60e",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T09:02:56.836660+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "9ad9151b-8114-43a3-95b8-236167946f8a",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T09:02:57.323756+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T09:02:57.323766+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "169f93c4-e15e-4f7e-9290-231b6dad44c0",
+        "employee_id": "3c6fd435-2144-45a5-909a-5dde7c47755a",
+        "employee_name": "Del Emp",
+        "employee_department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "employee_department_name": "TEST_del_dept_91d592",
+        "employee_division_id": "1a2dda76-4543-4fec-8908-ffac5adb6286",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "c4fd5989-933c-40de-9c57-fe5c02395a7b",
+        "target_department_name": "TEST_del_dept_91d592",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:04:06.925157+00:00",
+        "history": [
+          {
+            "by": "3c6fd435-2144-45a5-909a-5dde7c47755a",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T09:04:06.925165+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "9cf38262-3d67-4c15-b047-c810565d4f26",
+        "employee_id": "31a181fe-114e-499c-9b3b-7deee0476b8d",
+        "employee_name": "Test Emp",
+        "employee_department_id": "5043d9ea-f599-40bc-9171-5573bc461310",
+        "employee_department_name": "TEST_dept_654cc0",
+        "employee_division_id": "e37ea236-f777-46fa-b834-df3f463dc2f4",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:07:32.972933+00:00",
+        "history": [
+          {
+            "by": "31a181fe-114e-499c-9b3b-7deee0476b8d",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T09:07:32.972942+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "777bac08-4d8b-48e7-a673-4a51d5eb0f6b",
+        "employee_id": "09ea3f57-92be-40be-90c4-e654257f4c48",
+        "employee_name": "Del Emp",
+        "employee_department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "employee_department_name": "TEST_del_dept_74d070",
+        "employee_division_id": "7114f88e-a20e-4aea-81aa-bf3e29884959",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "e1b70d7e-9651-46c9-9c88-5bcf2e5de2d0",
+        "target_department_name": "TEST_del_dept_74d070",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:07:35.807401+00:00",
+        "history": [
+          {
+            "by": "09ea3f57-92be-40be-90c4-e654257f4c48",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T09:07:35.807409+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "36c75ac0-7669-469f-836a-62a6877ff458",
+        "employee_id": "748c38a6-5290-423b-a123-7f3cc4435a8c",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "921a07c2-6398-42de-8ce7-c4836411648f",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T09:07:43.729093+00:00",
+        "history": [
+          {
+            "by": "748c38a6-5290-423b-a123-7f3cc4435a8c",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T09:07:43.729103+00:00"
+          },
+          {
+            "by": "29847a15-413f-4ab0-a6ca-5576f9c67282",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:07:43.922260+00:00"
+          },
+          {
+            "by": "ff1a28ff-cb78-4bfb-8dd6-cab13f93fb0c",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:07:44.017686+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T09:07:44.112463+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "474e8ecb-9904-4996-aaff-78aee2c0015d",
+        "employee_id": "748c38a6-5290-423b-a123-7f3cc4435a8c",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "921a07c2-6398-42de-8ce7-c4836411648f",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T09:07:47.863777+00:00",
+        "history": [
+          {
+            "by": "748c38a6-5290-423b-a123-7f3cc4435a8c",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T09:07:47.863787+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "723ec7e9-9e96-4297-a260-9a4575181c9c",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T09:07:48.327275+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T09:07:48.327282+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "e78a3440-c050-47c0-820d-4a755a8a6514",
+        "employee_id": "ad9545da-2527-46d9-9a75-9727ba7c23a1",
+        "employee_name": "Test Emp",
+        "employee_department_id": "49d92fe6-b16f-4940-9d57-968dba0595f7",
+        "employee_department_name": "TEST_dept_bbd132",
+        "employee_division_id": "fab33186-59ec-4f34-8bdf-3db60753e21a",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T14:43:04.832774+00:00",
+        "history": [
+          {
+            "by": "ad9545da-2527-46d9-9a75-9727ba7c23a1",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T14:43:04.832782+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "06be6a6c-430d-46ae-82f5-1357fe8e585d",
+        "employee_id": "641d079c-f9a5-4e6d-9d64-79fb3ddc2165",
+        "employee_name": "Del Emp",
+        "employee_department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "employee_department_name": "TEST_del_dept_fb90df",
+        "employee_division_id": "d4516dec-30fa-4641-bb0b-01b96754ee63",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "fd22cbb5-0619-4eb5-a1f1-3bc5fd4b9487",
+        "target_department_name": "TEST_del_dept_fb90df",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T14:43:07.841367+00:00",
+        "history": [
+          {
+            "by": "641d079c-f9a5-4e6d-9d64-79fb3ddc2165",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T14:43:07.841375+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "18932d94-0381-4b4a-bc6a-bd77d99f878e",
+        "employee_id": "97b26fb6-c3a2-4c99-8eb1-c22062e687f5",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "f58b601a-21c5-4d87-9fd2-a290891d3d4e",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T14:43:16.390014+00:00",
+        "history": [
+          {
+            "by": "97b26fb6-c3a2-4c99-8eb1-c22062e687f5",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T14:43:16.390021+00:00"
+          },
+          {
+            "by": "33e2e591-87da-4dc8-855c-c97684df19a3",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T14:43:16.596565+00:00"
+          },
+          {
+            "by": "aafe0ac8-a7b2-4383-a2ff-2ef97af6d8cb",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T14:43:16.723091+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T14:43:16.824773+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "77930e6f-e34c-4b0a-9328-ddb5292a68d2",
+        "employee_id": "97b26fb6-c3a2-4c99-8eb1-c22062e687f5",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "f58b601a-21c5-4d87-9fd2-a290891d3d4e",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T14:43:20.807638+00:00",
+        "history": [
+          {
+            "by": "97b26fb6-c3a2-4c99-8eb1-c22062e687f5",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T14:43:20.807646+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "ceb74b6c-2aca-4892-8bf8-bb5dc100dd86",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T14:44:14.639302+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T14:44:14.639309+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "b19502cf-f074-46c6-b2df-615554a24a91",
+        "employee_id": "2075a838-48bc-4619-ba14-14807a84f075",
+        "employee_name": "Test Emp",
+        "employee_department_id": "aec8850f-456b-4b32-b5b5-1a445452e01c",
+        "employee_department_name": "TEST_dept_47e277",
+        "employee_division_id": "27a19e16-c60b-43b3-9f9b-5e68af84a7ae",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T15:48:17.723980+00:00",
+        "history": [
+          {
+            "by": "2075a838-48bc-4619-ba14-14807a84f075",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T15:48:17.723988+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "2183f624-01ae-4c6a-a29f-89a88260bba8",
+        "employee_id": "cee3fc95-39e9-42e9-bdfb-33020b76d0cf",
+        "employee_name": "Del Emp",
+        "employee_department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "employee_department_name": "TEST_del_dept_b44f7f",
+        "employee_division_id": "ecdbf665-a6b8-4985-a4be-3f7667bc6408",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "6f146f0f-2d1b-4305-85ea-086bc9117102",
+        "target_department_name": "TEST_del_dept_b44f7f",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T15:48:20.757410+00:00",
+        "history": [
+          {
+            "by": "cee3fc95-39e9-42e9-bdfb-33020b76d0cf",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T15:48:20.757418+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "3b465ac8-36da-41ba-b75b-80742cba9a66",
+        "employee_id": "e91c91dd-6602-47c7-97b4-cddbd1787668",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "f38be6cf-e6d9-42da-adab-d085e5c13a23",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T15:49:28.794042+00:00",
+        "history": [
+          {
+            "by": "e91c91dd-6602-47c7-97b4-cddbd1787668",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T15:49:28.794051+00:00"
+          },
+          {
+            "by": "a0922ac6-0fdb-4266-867a-2b917b64bc6d",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T15:49:29.019784+00:00"
+          },
+          {
+            "by": "d84f0607-4ec3-404a-95d7-2f7f47d3c23c",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T15:49:29.121064+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T15:49:29.240835+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "8120cf41-75e8-40a8-b3a6-c7db0cc96d9c",
+        "employee_id": "e91c91dd-6602-47c7-97b4-cddbd1787668",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "f38be6cf-e6d9-42da-adab-d085e5c13a23",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T15:49:33.802542+00:00",
+        "history": [
+          {
+            "by": "e91c91dd-6602-47c7-97b4-cddbd1787668",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T15:49:33.802549+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "d8a21eca-a443-4f15-be12-6f1f5d2adc6c",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T15:49:34.869561+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T15:49:34.869568+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "5cdb5752-04ad-48b5-8979-7b86ee8bf1a7",
+        "employee_id": "227fa814-4a90-4dfe-9c86-b5c746976837",
+        "employee_name": "Test Emp",
+        "employee_department_id": "aaea5ad2-4777-4af5-9717-364eedb67340",
+        "employee_department_name": "TEST_dept_e35dcf",
+        "employee_division_id": "b1543410-e550-417f-aca7-127f3f3c4167",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:01:51.009092+00:00",
+        "history": [
+          {
+            "by": "227fa814-4a90-4dfe-9c86-b5c746976837",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T16:01:51.009101+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "b8c9448c-71de-4cb8-85ac-1d27b2913a1c",
+        "employee_id": "b21e7d4e-8e63-4ce9-9a4e-b11985cfe035",
+        "employee_name": "Del Emp",
+        "employee_department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "employee_department_name": "TEST_del_dept_f43117",
+        "employee_division_id": "9947ee0f-3da3-4873-88f1-3ae5fdc5b208",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "fe073524-20ab-44dd-a366-723c5fc29369",
+        "target_department_name": "TEST_del_dept_f43117",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:01:54.016932+00:00",
+        "history": [
+          {
+            "by": "b21e7d4e-8e63-4ce9-9a4e-b11985cfe035",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T16:01:54.016941+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "cd9988b9-049f-4ec9-8abe-83e9536a42ed",
+        "employee_id": "2dbc0e89-0a68-4128-9ce3-d59447782679",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "71e0396a-3107-4b4f-99f7-23259b0e5658",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T16:02:02.823817+00:00",
+        "history": [
+          {
+            "by": "2dbc0e89-0a68-4128-9ce3-d59447782679",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T16:02:02.823826+00:00"
+          },
+          {
+            "by": "06a69435-1362-4d40-95de-b74ca4e1db0b",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:02:03.029079+00:00"
+          },
+          {
+            "by": "feced565-4530-40bf-8883-09f518e1e51b",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:02:03.163090+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:02:03.296323+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "aa7f9af2-380f-4082-ab7b-075ace9e07d3",
+        "employee_id": "2dbc0e89-0a68-4128-9ce3-d59447782679",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "71e0396a-3107-4b4f-99f7-23259b0e5658",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:03:07.532275+00:00",
+        "history": [
+          {
+            "by": "2dbc0e89-0a68-4128-9ce3-d59447782679",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T16:03:07.532283+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "3a67e0d5-9330-4f39-a08c-ebf3d932a31a",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T16:03:08.057356+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T16:03:08.057363+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "e24c8347-b2d6-4c6d-8a65-975749637864",
+        "employee_id": "ad6ca19f-8d04-4934-89fd-3c01294a6d5e",
+        "employee_name": "Test Emp",
+        "employee_department_id": "0d5b6ef8-191b-4ada-98a6-d33b77e5f9dd",
+        "employee_department_name": "TEST_dept_463f76",
+        "employee_division_id": "9d3714e3-0033-48eb-ab23-94bbda3b6acf",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:24:24.124629+00:00",
+        "history": [
+          {
+            "by": "ad6ca19f-8d04-4934-89fd-3c01294a6d5e",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T16:24:24.124638+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "30fee122-cb00-4f15-9f57-6a89506d642b",
+        "employee_id": "07d8e365-70f7-4f89-8785-a65a9a1f4228",
+        "employee_name": "Del Emp",
+        "employee_department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "employee_department_name": "TEST_del_dept_32ca57",
+        "employee_division_id": "7e4e49cf-ec01-4d00-8c00-47d29b20a085",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "4786f91c-7da8-43d5-b077-20ac9e2c42e1",
+        "target_department_name": "TEST_del_dept_32ca57",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:24:27.136681+00:00",
+        "history": [
+          {
+            "by": "07d8e365-70f7-4f89-8785-a65a9a1f4228",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T16:24:27.136690+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "bb2038af-3873-45d5-bd2b-d6596d841854",
+        "employee_id": "e81846a6-f908-41aa-ae96-176e8c788c45",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "425737cd-5b6d-4c36-96c0-0581ab3d513d",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T16:24:35.599602+00:00",
+        "history": [
+          {
+            "by": "e81846a6-f908-41aa-ae96-176e8c788c45",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T16:24:35.599610+00:00"
+          },
+          {
+            "by": "e949ffc1-312d-4903-954c-47b81596e306",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:24:35.834485+00:00"
+          },
+          {
+            "by": "75957d62-bdb2-4769-8b88-8a3be3280be4",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:24:35.936704+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:24:36.064749+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "363ecdd8-8c44-40f5-a58e-072ecddf8126",
+        "employee_id": "e81846a6-f908-41aa-ae96-176e8c788c45",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "425737cd-5b6d-4c36-96c0-0581ab3d513d",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:24:40.300427+00:00",
+        "history": [
+          {
+            "by": "e81846a6-f908-41aa-ae96-176e8c788c45",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T16:24:40.300438+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "2a198c90-a4f1-436e-8e92-00120c51b024",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T16:24:40.809987+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T16:24:40.809994+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "569b6638-f22f-4a3e-ab67-304e95012984",
+        "employee_id": "5c4b0434-236c-45b6-b8fa-12622ae72fb1",
+        "employee_name": "Emp E1",
+        "employee_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "employee_department_name": "TEST_divscope_X_289b07",
+        "employee_division_id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "target_department_name": "TEST_divscope_X_289b07",
+        "notes": "TEST_divscope_a_289b07_e1",
+        "status": "approved",
+        "created_at": "2026-07-02T16:26:55.597060+00:00",
+        "history": [
+          {
+            "by": "5c4b0434-236c-45b6-b8fa-12622ae72fb1",
+            "by_name": "Emp E1",
+            "action": "created",
+            "at": "2026-07-02T16:26:55.597067+00:00"
+          },
+          {
+            "by": "28dec914-4089-4e6a-8b19-1dbc38c8a2f6",
+            "by_name": "Divm A",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:55.711651+00:00"
+          },
+          {
+            "by": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:55.818749+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:55.928836+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "19e8ff11-3e9c-418c-bf45-2e31a7a42730",
+        "employee_id": "d11afc97-816d-4cfc-8a56-d9a348e8cf6e",
+        "employee_name": "Emp E2",
+        "employee_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "employee_department_name": "TEST_divscope_X_289b07",
+        "employee_division_id": "5d22fe56-f9df-43ab-bbb6-0b2d5feb69b9",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "target_department_name": "TEST_divscope_X_289b07",
+        "notes": "TEST_divscope_a_289b07_e2",
+        "status": "approved",
+        "created_at": "2026-07-02T16:26:56.034451+00:00",
+        "history": [
+          {
+            "by": "d11afc97-816d-4cfc-8a56-d9a348e8cf6e",
+            "by_name": "Emp E2",
+            "action": "created",
+            "at": "2026-07-02T16:26:56.034459+00:00"
+          },
+          {
+            "by": "28dec914-4089-4e6a-8b19-1dbc38c8a2f6",
+            "by_name": "Divm A",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.143561+00:00"
+          },
+          {
+            "by": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.248148+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.355385+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "d3e797e3-2ff9-407e-902d-2d8243f0902f",
+        "employee_id": "16e8f211-a61d-4d5f-9148-208bab270893",
+        "employee_name": "Emp E3",
+        "employee_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "employee_department_name": "TEST_divscope_X_289b07",
+        "employee_division_id": "9ad0d0f7-7b52-4984-b239-6997df22cbf6",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "1a50be40-ec6d-49b3-88f6-0e9f3e29f444",
+        "target_department_name": "TEST_divscope_X_289b07",
+        "notes": "TEST_divscope_a_289b07_e3",
+        "status": "approved",
+        "created_at": "2026-07-02T16:26:56.461083+00:00",
+        "history": [
+          {
+            "by": "16e8f211-a61d-4d5f-9148-208bab270893",
+            "by_name": "Emp E3",
+            "action": "created",
+            "at": "2026-07-02T16:26:56.461091+00:00"
+          },
+          {
+            "by": "04e5dd0f-140f-4128-b721-7b2673e89ed6",
+            "by_name": "Divm B",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.556822+00:00"
+          },
+          {
+            "by": "80014937-b8a1-4efc-b9ee-a3a979e92f8b",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.658565+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:26:56.757081+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "54c9bc3d-2f96-4405-8a23-372248ce8393",
+        "employee_id": "586e1a2f-80e5-4cd6-b3e3-f675c277143e",
+        "employee_name": "Test Emp",
+        "employee_department_id": "1afa7000-6a57-4296-92e8-3a43ac92b412",
+        "employee_department_name": "TEST_dept_ecbe94",
+        "employee_division_id": "9541b460-8c6c-49e5-a552-7719fe7029bd",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_activity",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "test",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:27:12.116449+00:00",
+        "history": [
+          {
+            "by": "586e1a2f-80e5-4cd6-b3e3-f675c277143e",
+            "by_name": "Test Emp",
+            "action": "created",
+            "at": "2026-07-02T16:27:12.116458+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "a542e6cc-59e8-4eff-b382-e74f452aef71",
+        "employee_id": "9eede3c1-adf4-443e-843a-ce099f5c14f2",
+        "employee_name": "Del Emp",
+        "employee_department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "employee_department_name": "TEST_del_dept_30d2bc",
+        "employee_division_id": "3ca77de4-1067-4761-9901-c9882e031a01",
+        "activity_date": "2026-07-02",
+        "activity_type": "TEST_range_act",
+        "target_department_id": "4be655ea-1914-49d3-9412-0bd514022836",
+        "target_department_name": "TEST_del_dept_30d2bc",
+        "notes": "range",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:27:15.595068+00:00",
+        "history": [
+          {
+            "by": "9eede3c1-adf4-443e-843a-ce099f5c14f2",
+            "by_name": "Del Emp",
+            "action": "created",
+            "at": "2026-07-02T16:27:15.595076+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "f21106e9-7a21-4449-89dd-85817b80cf13",
+        "employee_id": "9046650c-badd-4e2a-911b-0eeb04322a97",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "6e5b5f50-dd8a-4a8b-ac85-0ec33a13856e",
+        "activity_date": "2026-01-10",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "TEST_note",
+        "status": "approved",
+        "created_at": "2026-07-02T16:27:45.196046+00:00",
+        "history": [
+          {
+            "by": "9046650c-badd-4e2a-911b-0eeb04322a97",
+            "by_name": "Employee",
+            "action": "created",
+            "at": "2026-07-02T16:27:45.196055+00:00"
+          },
+          {
+            "by": "2c323014-7236-4cc6-870f-02cbd261ca8d",
+            "by_name": "Div Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:27:45.394153+00:00"
+          },
+          {
+            "by": "fbc4cd03-4449-4018-99a4-3f63ac9d8bd1",
+            "by_name": "Dept Manager",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:27:45.509506+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:27:45.628336+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "3d378489-e05a-4c4f-add5-93e5880e25dc",
+        "employee_id": "9046650c-badd-4e2a-911b-0eeb04322a97",
+        "employee_name": "Self Named",
+        "employee_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "employee_department_name": "قسم الحركة الجوية",
+        "employee_division_id": "6e5b5f50-dd8a-4a8b-ac85-0ec33a13856e",
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_edn_create",
+        "target_department_id": "4ba6e1b8-3ef3-4700-a87d-8262e3fce5f2",
+        "target_department_name": "قسم الحركة الجوية",
+        "notes": "check edn field",
+        "status": "pending_division",
+        "created_at": "2026-07-02T16:27:49.653664+00:00",
+        "history": [
+          {
+            "by": "9046650c-badd-4e2a-911b-0eeb04322a97",
+            "by_name": "Self Named",
+            "action": "created",
+            "at": "2026-07-02T16:27:49.653673+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "912331cb-3fdc-475a-bd64-900c0c3137a8",
+        "employee_id": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+        "employee_name": "المدير العام",
+        "employee_department_id": null,
+        "employee_department_name": null,
+        "employee_division_id": null,
+        "activity_date": "2026-01-15",
+        "activity_type": "TEST_gm_activity",
+        "target_department_id": null,
+        "target_department_name": null,
+        "notes": "gm has no dept",
+        "status": "approved",
+        "created_at": "2026-07-02T16:28:10.373639+00:00",
+        "history": [
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "created",
+            "at": "2026-07-02T16:28:10.373647+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "5254a254-8814-4724-b232-3840b66a9606",
+        "employee_id": "b60911d3-83f0-4cb2-a4f2-623b9f7f1b8b",
+        "employee_name": "Emp E1",
+        "employee_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "employee_department_name": "TEST_divscope_X_9f963f",
+        "employee_division_id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "target_department_name": "TEST_divscope_X_9f963f",
+        "notes": "TEST_divscope_a_9f963f_e1",
+        "status": "approved",
+        "created_at": "2026-07-02T16:28:15.173851+00:00",
+        "history": [
+          {
+            "by": "b60911d3-83f0-4cb2-a4f2-623b9f7f1b8b",
+            "by_name": "Emp E1",
+            "action": "created",
+            "at": "2026-07-02T16:28:15.173860+00:00"
+          },
+          {
+            "by": "9e120e48-2dec-48a1-9cb1-e06406ac1cba",
+            "by_name": "Divm A",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.282165+00:00"
+          },
+          {
+            "by": "f04280e6-a96c-43c0-bb84-0780eb9d5cc3",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.379341+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.481543+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "256b0e4e-a5da-4eac-bb40-43d80bc8fa58",
+        "employee_id": "6322dd7f-cf98-44ad-9ae9-9f3c5fbb8985",
+        "employee_name": "Emp E2",
+        "employee_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "employee_department_name": "TEST_divscope_X_9f963f",
+        "employee_division_id": "7e90b4c8-4b2a-47d8-aba4-0c814094925f",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "target_department_name": "TEST_divscope_X_9f963f",
+        "notes": "TEST_divscope_a_9f963f_e2",
+        "status": "approved",
+        "created_at": "2026-07-02T16:28:15.579456+00:00",
+        "history": [
+          {
+            "by": "6322dd7f-cf98-44ad-9ae9-9f3c5fbb8985",
+            "by_name": "Emp E2",
+            "action": "created",
+            "at": "2026-07-02T16:28:15.579466+00:00"
+          },
+          {
+            "by": "9e120e48-2dec-48a1-9cb1-e06406ac1cba",
+            "by_name": "Divm A",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.674555+00:00"
+          },
+          {
+            "by": "f04280e6-a96c-43c0-bb84-0780eb9d5cc3",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.785315+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:15.884006+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "918c9e50-a4b9-4930-ba12-c9b12d76b55f",
+        "employee_id": "467e6f8b-cc6d-4954-89ca-ad965e455fe6",
+        "employee_name": "Emp E3",
+        "employee_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "employee_department_name": "TEST_divscope_X_9f963f",
+        "employee_division_id": "c85a80e3-cb5a-4c21-8716-462039464132",
+        "activity_date": "2026-01-15",
+        "activity_type": "تفتيش أمني",
+        "target_department_id": "86a86312-36d6-4e48-8ff5-eff1661e6817",
+        "target_department_name": "TEST_divscope_X_9f963f",
+        "notes": "TEST_divscope_a_9f963f_e3",
+        "status": "approved",
+        "created_at": "2026-07-02T16:28:15.992191+00:00",
+        "history": [
+          {
+            "by": "467e6f8b-cc6d-4954-89ca-ad965e455fe6",
+            "by_name": "Emp E3",
+            "action": "created",
+            "at": "2026-07-02T16:28:15.992198+00:00"
+          },
+          {
+            "by": "02165012-2ab7-4fb0-b492-ad29b6de6f43",
+            "by_name": "Divm B",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:16.098926+00:00"
+          },
+          {
+            "by": "f04280e6-a96c-43c0-bb84-0780eb9d5cc3",
+            "by_name": "DM X",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:16.197761+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T16:28:16.346574+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "78a439dd-c324-431e-9513-53a7f771a40a",
+        "employee_id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "employee_name": "Ss",
+        "employee_department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "employee_department_name": "IT",
+        "employee_division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "activity_date": "2026-07-02",
+        "activity_type": "مد شبكة نت ",
+        "target_department_id": "b989433c-bb00-47ac-83c5-043d6d73c981",
+        "target_department_name": "قسم التدريب",
+        "notes": "حسب المذكرة",
+        "status": "approved",
+        "created_at": "2026-07-02T16:59:43.928043+00:00",
+        "history": [
+          {
+            "by": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+            "by_name": "Ss",
+            "action": "created",
+            "at": "2026-07-02T16:59:43.928057+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "edit",
+            "reason": null,
+            "at": "2026-07-02T17:00:47.480426+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T17:00:51.651678+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T17:01:08.350006+00:00"
+          }
+        ],
+        "rejection_reason": null
+      },
+      {
+        "id": "732a3269-f81a-4b84-8cc7-2a08e862bc8f",
+        "employee_id": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+        "employee_name": "Ss",
+        "employee_department_id": "e2d4ea87-c167-4ac3-a0ca-7062e9c36620",
+        "employee_department_name": "IT",
+        "employee_division_id": "69ffe798-3328-4e2d-9444-6ae205d4b635",
+        "activity_date": "2026-07-02",
+        "activity_type": "تسجيل البريد الابكتروني",
+        "target_department_id": "b526e662-6143-420a-96d2-b333e54be6ce",
+        "target_department_name": "قسم الاعلام",
+        "notes": "",
+        "status": "approved",
+        "created_at": "2026-07-02T17:03:25.525228+00:00",
+        "history": [
+          {
+            "by": "d2e51509-8264-4423-ae80-8dad4b7bdcf8",
+            "by_name": "Ss",
+            "action": "created",
+            "at": "2026-07-02T17:03:25.525236+00:00"
+          },
+          {
+            "by": "cb286b15-7858-4833-b154-13baa44455fc",
+            "by_name": "Raad",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T17:03:44.567031+00:00"
+          },
+          {
+            "by": "22d93524-27c0-43ac-abe0-de4d3745aedc",
+            "by_name": "المدير العام",
+            "action": "approve",
+            "reason": null,
+            "at": "2026-07-02T17:04:00.303225+00:00"
+          }
+        ],
+        "rejection_reason": null
+      }
+    ]
+  }
+}

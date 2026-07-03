@@ -1,0 +1,41 @@
+{
+  "summary": "Frontend-only regression + new-feature verification for iteration 8 (dept employee activities report, KPI dashboard redesign, new color palette). All 3 requested changes confirmed working end-to-end via mobile-viewport Playwright (390x844): (1) Login renders with new GRADIENTS.primary (#062561 → #0B3D91 → #1449A8), logo/form/designer credit ('تصميم المهندس معاد كاظم') all visible; admin/admin123 login navigates to /home. (2) Home header uses new deep-blue gradient; KPI cards + quick actions render with teal accent (reports) and gold (KPI trophy). (3) Created TEST_deptmgr1 via admin API; logged in successfully; home shows 'تقرير القسم' quick action (testID action-dept-report); tapping opens /dept-report which now displays section header 'أداء العاملين في القسم' with the green/teal button 'تصدير تقرير الموظفين' (testID export-emp-activities) — button tap fires without crash and triggers exportPdf(buildEmployeesActivitiesHtml(...)). (4) /kpi is now a proper visual dashboard: gauge (testID avg-gauge showing 58/100), donut chart of ratings distribution (7 employees split across ممتاز/جيد جداً/جيد/يحتاج تحسين), top-5 horizontal bar chart, plus modern employee cards with rank chips, rating chips, progress bars — 3 SVG elements rendered as expected; export-kpi + print-kpi header buttons present and functional.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "dept-report", "issues": ["Banner shows raw department name including test suffix (e.g. 'قسم العمليات الجوية_r3f84_r3ef5_r1887_rd9cf') — this is TEST_-seeded data leftover from prior backend test runs, not a UI bug. Confirm cleanup of TEST_-prefixed departments if desired."]}
+    ],
+    "react_native_issues": [
+      {"component": "react-native-web (global)", "issue": "Console warning: '\"shadow*\" style props are deprecated. Use \"boxShadow\".' Non-blocking web-preview warning caused by RN shadowColor/shadowOpacity/etc. used across login/home/kpi styles. On native builds this is fine; on web preview it clutters logs. Consider migrating to boxShadow or ignoring for MVP. Reference: /app/frontend/app/login.tsx:186, /app/frontend/app/(tabs)/home.tsx:237, /app/frontend/app/kpi.tsx:332."},
+      {"component": "react-native-svg (web)", "issue": "Console error: 'Invalid DOM property transform-origin. Did you mean transformOrigin?' emitted when Gauge/Donut render (SVG <G rotation=\"-90\" origin=...>). This is an upstream react-native-svg web-adapter quirk that does not affect rendering (charts display correctly). Non-blocking. Reference: /app/frontend/app/kpi.tsx:202,248."},
+      {"component": "react-native-web View", "issue": "Console warning: 'props.pointerEvents is deprecated. Use style.pointerEvents' — originates from a third-party dependency (likely expo-linear-gradient or SafeAreaView on web), not app code. Non-blocking."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_gcaan_backend.py",
+    "/app/backend/tests/test_reports_refactor.py"
+  ],
+  "action_items": [
+    "Optional: migrate deprecated 'shadow*' style props on login/home/kpi to 'boxShadow' to silence RN 0.79+ web warnings.",
+    "Optional (non-blocking): file upstream issue or ignore react-native-svg 'transform-origin' web warning — charts render fine.",
+    "Optional: seed/cleanup process leaves TEST_-suffixed department names visible in the dept-report banner for the seeded manager — clean up TEST_ departments if any real end-user demo is planned."
+  ],
+  "critical_code_review_comments": [
+    "src/theme.ts — GRADIENTS.primary is correctly typed as a 3-tuple [string,string,string] matching LinearGradient's colors prop expectations. Palette is cohesive (deep blue → royal blue → teal accent).",
+    "app/kpi.tsx — Correct use of react-native-svg (Svg/Circle/Rect/G/Text). Gauge computes stroke-dash via 2πr formula; Donut accumulates offsets correctly. Both wrap in <G rotation=\"-90\" origin=...> to start arc at 12 o'clock. Legend + count rendered from same buckets object → single source of truth. testID coverage is good (kpi-dashboard, avg-gauge, export-kpi, print-kpi, kpi-row-<id>).",
+    "app/dept-report.tsx — Section header 'أداء العاملين في القسم' correctly paired with green/teal export button (COLORS.accent #0EA5A5). Uses buildEmployeesActivitiesHtml from src/reportExport.ts:188 which generates Arabic PDF titled 'تقرير نشاطات موظفي <deptName>' grouped by employee (verified in source). Both header exports (dept-report) + this per-employee export share exportPdf + printHtml correctly.",
+    "app/(tabs)/home.tsx — Role-based quickActions map is clean and includes dept-report only for department_manager role (line 189). testIDs follow action-<key> pattern. Common actions (reports, kpi) shared correctly across roles.",
+    "app/login.tsx — LinearGradient wraps SafeAreaView + KeyboardAvoidingView + ScrollView correctly for mobile keyboard handling. All inputs have testIDs.",
+    "No hardcoded URLs found — all API calls go through src/api.ts using EXPO_PUBLIC_BACKEND_URL.",
+    "No deprecated Expo packages detected (no expo-av, expo-barcode-scanner, expo-background-fetch)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not re-tested this iteration — 55/55 passed in iter 7)", "frontend": "100% (all 8 requested checks pass)"},
+  "seed_data_creation": "Created 1 test user via admin API: TEST_deptmgr1 / pass123 (department_manager) attached to first department. Not cleaned up — persists for main-agent reuse.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 8 frontend changes verified: new GRADIENTS.primary palette on login/home/kpi headers; KPI screen fully redesigned as visual dashboard with react-native-svg gauge + donut + horizontal-bar; dept-report has new 'export employees activities' button (testID export-emp-activities) that produces per-employee-grouped PDF via buildEmployeesActivitiesHtml. Test users available: admin/admin123 (GM), TEST_deptmgr1/pass123 (dept_manager attached to first dept). Backend was unchanged this iteration; last full pytest run in iter 7 passed 55/55.",
+  "rca_of_issue": "N/A — no regressions or blocking bugs found."
+}

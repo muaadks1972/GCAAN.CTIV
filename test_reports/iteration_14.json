@@ -1,0 +1,42 @@
+{
+  "summary": "Iteration 14 verified the updated Reports scope-visibility rules (employee now sees division-level activities, not self-only). Added /app/backend/tests/test_reports_division_scope.py with 14 pytest cases exercising the new behavior end-to-end via the real hierarchy: GM → new department X → 2 divisions DivA/DivB → DMA/DMB division_managers → employees E1+E2 in DivA and E3 in DivB → 1 activity per employee driven through the full divm→dm→gm approve chain. All 14 new tests pass and the full backend suite is now 156/156 (142 prior + 14 new) with zero regressions. Employee E1 perspective verified: /reports/summary shows approved>=2 (E1+E2), /reports/by-department returns E1's dept row with total>=2, /reports/completion-rates and /reports/kpis both contain E1+E2 and EXCLUDE E3, /reports/weekly and /reports/monthly include activities of both E1 and E2 but not E3. Department-manager perspective verified: sees all three employees (E1+E2+E3) across completion-rates, kpis, summary (approved>=3) and weekly. Division-manager regression verified: DMA sees only DivA employees (E1,E2 — not E3), DMB sees only DivB (E3 — not E1,E2). General-manager regression verified: sees all three employees in completion-rates and kpis. No mocked APIs. No frontend testing per scope. No prior tests needed updating — a scan (`grep -rn 'emp_token' | grep -iE 'reports/summary|kpis|completion|weekly|monthly|by-department'`) confirmed the previous suite never asserted the old self-only-for-employee report behavior, so nothing had to be modified.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "GET /api/reports/by-department", "issue": "For an employee, the report is scoped by employee_division_id but still enumerates ALL departments (line 732 `db.departments.find({})`). Departments outside the employee's own dept always show total=0, which is harmless but leaks the full department list to employees. Consider filtering `departments` to the user's own department when role=='employee' for cleaner UX and least-privilege exposure."},
+      {"endpoint": "GET /api/reports/completion-rates & /api/reports/kpis", "issue": "The `users_q` and activity `q` filters are duplicated across the two endpoints (server.py 767-774 and 810-817 are near-identical). Consider extracting a helper `_users_scope_query(user)` to mirror `_filter_by_scope(user)` and remove duplication. Cosmetic — no behavioral impact."}
+    ]
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": [], "react_native_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_reports_division_scope.py",
+    "/app/backend/tests/test_reports_refactor.py",
+    "/app/backend/tests/test_gcaan_backend.py",
+    "/app/backend/tests/test_comprehensive_report.py",
+    "/app/backend/tests/test_subscription.py",
+    "/app/backend/tests/test_audit_and_analysis.py",
+    "/app/backend/tests/test_admin_backup.py",
+    "/app/backend/tests/test_delete_and_range.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Optional: extract a `_users_scope_query(user)` helper to remove the duplicated users_q blocks in /reports/completion-rates (line 767-774) and /reports/kpis (line 810-817).",
+    "Optional: filter the department list in /reports/by-department to the user's own department when role=='employee' so the response doesn't leak all other department names as total=0 rows."
+  ],
+  "critical_code_review_comments": [
+    "server.py:625-640 _filter_by_scope — correctly implements the new spec. employee and division_manager both use employee_division_id (identical query), department_manager uses employee_department_id, general_manager returns {}. Clean and readable.",
+    "server.py:767-774 users_q inside /reports/completion-rates — employee branch uses division_id (matches activity-side scope). Consistent.",
+    "server.py:810-817 users_q inside /reports/kpis — same division_id filter for employees. Consistent with the completion-rates handler.",
+    "server.py:658-672 /reports/weekly and /monthly — reuse _filter_by_scope, so the new division-level visibility flows through automatically. No changes needed; tests confirm.",
+    "server.py:674-726 /reports/range — also uses _filter_by_scope, so employee callers will see division-scoped ranges. Tests didn't cover this endpoint per scope, but the behavior is inherited correctly.",
+    "Duplicated users_q blocks between completion-rates and kpis: minor DRY violation, worth a refactor. See action items."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_reports_division_scope.py (new — 14 tests, 4 test classes)"
+  ],
+  "success_rate": {"backend": "100% (156/156 pytest — 14 new division-scope + 142 prior)", "frontend": "N/A (backend-only per scope)"},
+  "seed_data_creation": "Per-run seed under a uuid tag TAG=uuid4().hex[:6] so runs never collide. Objects created: 1 department (TEST_divscope_X_<TAG>), 2 divisions (TEST_divscope_A_<TAG>, TEST_divscope_B_<TAG>), 5 users (dm/dma/dmb/e1/e2/e3, all prefixed TEST_divscope_*, password pw1234), 3 activities (all approved). Data is left in the DB after the run — that's fine because every run uses a fresh TAG and the department is easily identifiable by the TEST_divscope_ prefix if manual cleanup is ever needed.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 14 covers the division-scope reports change. Full suite is 156/156. The new test file test_reports_division_scope.py is self-contained (single module-scoped fixture `env` builds the whole hierarchy) and can be reused as a regression suite for any future reports-scope work. Note: the fixture depends on the admin/admin123 GM being seeded and on the /api/activities status-machine remaining {pending_division → pending_department → pending_gm → approved}; if the workflow changes, update the `_create_and_approve` helper accordingly. Test credentials unchanged: admin/admin123 (GM). Every TEST_divscope_* user uses pw1234."
+}

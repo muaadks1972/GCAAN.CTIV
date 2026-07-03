@@ -1,0 +1,40 @@
+{
+  "summary": "Iteration 11 full-stack verification of the 3 new admin backup/restore/system-info endpoints + /system UI screen + dept_manager KPI shortcut. Backend: 97/97 pytest pass (86 prior + 11 new in backend/tests/test_admin_backup.py covering 401 unauth, 403 non-GM, 200 shape + collection contents for system-info & backup, and 4 restore validation branches — did NOT execute a real restore to avoid wiping DB). Frontend (mobile 390x844, admin/admin123): 'إدارة النظام' quick action (testID action-system) is visible on GM home and navigates to /system. /system renders hero card (total data 70.2 KB / 162 records / 176 KB storage) + 4 collection rows (testID coll-users=62, coll-departments=32, coll-divisions=30, coll-activities=38) + backup card (testID backup-btn) + restore card (testID restore-btn). Tapping backup-btn triggers a browser download of gcaan-backup-2026-07-02.json (90 KB) — verified valid JSON with version=1 and all 4 collections populated. Tapping restore-btn shows browser confirm dialog with Arabic warning text — dismissed (no restore executed). For dept_manager role (created TEST_ui_dm_1783003604): home shows action-employees-kpi which navigates to /kpi rendering the KPI dashboard auto-scoped to that department's 11 employees (avg 54/100 across 19 activities). No React Native red screens; only carried-over non-blocking shadow* deprecation warning.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": [
+      {"component": "react-native-web (global)", "issue": "Non-blocking warning carried over: 'shadow*' style props are deprecated. Use 'boxShadow'. Not a regression. Reference: /app/frontend/app/*.tsx style sheets (e.g., home.tsx:239)."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_admin_backup.py",
+    "/app/backend/tests/test_delete_and_range.py",
+    "/app/backend/tests/test_gcaan_backend.py",
+    "/app/backend/tests/test_comprehensive_report.py",
+    "/app/backend/tests/test_reports_refactor.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Optional: server.py:1005-1027 POST /admin/restore uses collections.get('users', []) which returns empty list when 'users' key missing — the following any(u.get('role')=='general_manager' for u in []) is False so it correctly 400s. Fine. Consider also validating that at least one dept exists to avoid orphan users on partial restore payloads (nice-to-have).",
+    "Optional: server.py:1024 restore does await db[name].insert_many(clean_docs) inside a loop after delete_many — not transactional; if a subsequent collection insert fails, DB is left in inconsistent state. Consider Motor transactions/session for atomic restore.",
+    "Optional (carried over): migrate shadow* → boxShadow across StyleSheet objects to silence RN 0.79+ web warning."
+  ],
+  "critical_code_review_comments": [
+    "backend/server.py:948-980 GET /admin/system-info — Properly guarded via require_roles('general_manager'). dbStats + collStats wrapped in try/except → gracefully returns 0s if MongoDB fails. Response shape matches spec exactly (database, total_data_bytes, total_storage_bytes, index_bytes, objects, collections[], generated_at).",
+    "backend/server.py:983-1002 GET /admin/backup — GM-only, streams JSON with correct application/json content-type + Content-Disposition attachment header + timestamped filename. Excludes _id via {'_id': 0} projection. Uses ensure_ascii=False so Arabic content is preserved verbatim.",
+    "backend/server.py:1005-1027 POST /admin/restore — GM-only, validates collections is dict (400) and requires at least one general_manager user in the backup (400 with Arabic detail). Correctly strips _id before insert_many. Returns {ok, restored:{count per coll}, at}.",
+    "frontend/app/system.tsx — Correct testIDs (system-screen, back-btn, coll-{name}, backup-btn, restore-btn, system-message). Web branch uses fetch+blob+<a download> (works). Native branch uses expo-file-system + expo-sharing with legacy fallback. Restore branch is web-only with clear message on native. Auth token pulled from secure storage.",
+    "frontend/app/(tabs)/home.tsx:187-195 dept_manager quickActions correctly include 'employees-kpi' (label 'KPI الموظفين') routing to /kpi. Auto-scoping is inherited from backend _filter_by_scope on /reports/kpis (verified in server.py:756-763)."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_admin_backup.py (new — 11 tests)"
+  ],
+  "success_rate": {"backend": "100% (97/97 pytest)", "frontend": "100% (all requested UI + integration checks pass)"},
+  "seed_data_creation": "test_admin_backup.py creates a TEST_admin_dm_probe department_manager (idempotent — reuses on rerun). UI flow created TEST_ui_dm_1783003604 dept_manager for the KPI navigation check. Consider nightly cleanup of TEST_-prefixed users.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 11 fully verified. New backend endpoints: GET /api/admin/system-info (GM only, returns dbStats + per-collection stats for users/departments/divisions/activities), GET /api/admin/backup (GM only, returns application/json attachment containing all 4 collections), POST /api/admin/restore (GM only, replaces all data; validates dict collections + presence of at least one general_manager user). New frontend screen /system.tsx with testIDs system-screen, coll-{users|departments|divisions|activities}, backup-btn, restore-btn. GM home now has action-system; dept_manager home has action-employees-kpi routing to /kpi (already existed, KPI dashboard auto-scopes via /reports/kpis _filter_by_scope). Restore was intentionally NOT executed in tests — only validation branches exercised. All 97 backend tests pass. Test creds unchanged: admin/admin123."
+}

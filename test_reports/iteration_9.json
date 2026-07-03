@@ -1,0 +1,37 @@
+{
+  "summary": "Iteration 9 full-stack verification of the 5 requested changes (DOCX export, comprehensive report, user-edit regression, activity-new dropdown bug fix, GCAAN logo). Backend: 63/63 pytest cases pass (55 prior + 8 new in tests/test_comprehensive_report.py covering JSON shape, sort order, DOCX headers/body/zip magic, and role scoping for dept-manager + employee). Frontend (390x844 mobile viewport, admin/admin123 login): (1) Reports tab now has all 5 sub-tabs — tab-weekly, tab-monthly, tab-by-dept, tab-completion, tab-comprehensive — each present via testID. (2) Comprehensive tab renders 11 comp-emp-* rows showing employee name, activity count, performing department, target departments. (3) export-docx-btn (Word) appears only on comprehensive tab; tapping triggers GET /api/reports/comprehensive.docx returning HTTP 200 with content-type application/vnd.openxmlformats-officedocument.wordprocessingml.document (verified via response interception). (4) export-btn (PDF) also present on comprehensive tab. (5) activity-new dropdown bug fully fixed — 27 departments render all with visible bounding rects (top offsets 313→903+ px); computed style overflow=visible, maxHeight=none, height=1125px; tapping the LAST option (TEST_empty_2ce487) successfully populates the picker. (6) users.tsx edit modal opens correctly with edit-user-name, edit-user-password, save-user-edit fields — dept-manager/div-manager/employee edit hierarchy verified in backend via TestEditing suite (all 11 passing). (7) GCAAN aviation logo (control tower + wings + 'GCAAN' text on light-blue circular background) displays correctly on both login and home screens — NOT a green checkmark.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": [
+      {"component": "react-native-web (global)", "issue": "Non-blocking console warning: '\"shadow*\" style props are deprecated. Use \"boxShadow\".' Same warning reported in iter 8; unchanged. Not a regression. Reference: /app/frontend/app/login.tsx and other style sheets."}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_comprehensive_report.py",
+    "/app/backend/tests/test_gcaan_backend.py",
+    "/app/backend/tests/test_reports_refactor.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Optional (non-blocking, carried over from iter 8): migrate shadow* → boxShadow across style sheets to silence RN 0.79+ web warnings."
+  ],
+  "critical_code_review_comments": [
+    "backend/server.py:727-756 — _build_comprehensive_data correctly reuses _filter_by_scope so JSON + DOCX endpoints share the same role-scoped aggregation. Targets list sorted by count desc, outer list sorted by total desc. Mongo _id excluded via projection.",
+    "backend/server.py:764-841 — DOCX generator uses python-docx with RTL section, RTL paragraphs (custom _set_rtl w:bidi), Arabic column headers matching PDF (#, الموظف, عدد النشاطات, القسم المنفّذ, الأقسام المستهدفة). StreamingResponse with correct MIME + Content-Disposition attachment header + timestamped filename. Body streamed from BytesIO (no /tmp file leak).",
+    "frontend/app/activity-new.tsx:227-233 — dropdown style block cleanly stripped of maxHeight + overflow:hidden. Because the dropdown is inline in the parent ScrollView, all 27 departments are laid out and the outer ScrollView handles scrolling naturally. Bug fix is minimal and correct.",
+    "frontend/app/(tabs)/reports.tsx:98-103 — onExportDocx reads token from secureGet + uses process.env.EXPO_PUBLIC_BACKEND_URL (no hardcoded URL). Web/native download split cleanly in src/reportExport.ts:363-390 (blob+anchor on web, expo-file-system+expo-sharing on native).",
+    "frontend/src/reportExport.ts:378 — Uses expo-file-system/legacy with a graceful fallback to expo-file-system. Since expo-file-system 19 changed to a legacy submodule for downloadAsync, this is the current recommended pattern.",
+    "frontend/app/users.tsx — edit modal wires testIDs edit-user-name, edit-user-password, save-user-edit. Backend TestEditing suite (11 tests) already covers admin→dept_mgr, dept_mgr→div_mgr+employee, div_mgr→employee, self-update, empty/short-password/missing-user 400/404 branches — all pass.",
+    "frontend/assets/images/gcaan-logo.png — 157×162 PNG, center pixel RGB(158,190,211) light-blue background. Visual confirmation via screenshot: control tower + wings + 'GCAAN' text — matches spec, not a green checkmark."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (63/63 pytest)", "frontend": "100% (all 8 requested checks pass)"},
+  "seed_data_creation": "test_comprehensive_report.py TestComprehensiveScoping fixture seeds TEST_dept_/TEST_dm_/TEST_divm_/TEST_emp_ (+1 activity) per test-class run. These accrete across runs; existing user/dept lists show several TEST_-prefixed entries from prior iterations. Consider a nightly cleanup if it matters for demos.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 9 backend + frontend fully verified. Endpoints: GET /api/reports/comprehensive (JSON, role-scoped), GET /api/reports/comprehensive.docx (StreamingResponse w/ correct MIME). Frontend reports.tsx now has 5 sub-tabs with export-docx-btn on comprehensive tab only. activity-new dropdown accepts all N departments (tested with 27) with no maxHeight/overflow clipping. GCAAN aviation logo is on login/home/profile screens. Test creds unchanged: admin/admin123. Backend depends on python-docx==1.2.0 (installed).",
+  "rca_of_issue": "N/A — no regressions found; all requested changes verified working end-to-end."
+}

@@ -1,0 +1,42 @@
+{
+  "summary": "Iteration 13 backend-only verification of the new Subscription Management endpoints (GET/POST /api/admin/subscription). Added /app/backend/tests/test_subscription.py with 24 pytest cases covering auth guards, response shape, validation, persistence, computation and audit-log side-effect. All 24 new tests pass and the full backend suite is now 142/142 (118 prior + 24 new). Verified: (a) GET is accessible by any authenticated user — GM and department_manager both 200 with all 8 required fields (start_date, end_date, days_remaining, days_total, percent_used, expired, configured, note); (b) unauthenticated GET/POST → 401; non-GM POST → 403; (c) validation returns 400 for invalid end_date format ('2026/12/31'), invalid start_date format, end_date < start_date, duration_days = 0, duration_days = -5, duration_days = 3651, and payload with neither end_date nor duration_days; (d) POST with duration_days=100 → end_date = today+100, days_total=100, days_remaining=100, percent_used=0, expired=false, configured=true; a subsequent GET returns identical data (persistence confirmed); (e) POST with start=today-100 & end=today+100 → days_total=200, days_remaining=100, percent_used≈50; (f) POST with past end_date → expired=true, days_remaining=0; (g) omitting start_date defaults it to today; (h) after each successful POST an audit-log row is created with entity_type='subscription', action='update', user_role='general_manager'. Regression sanity: /auth/login, /departments, /activities, /reports/summary, /admin/backup, /admin/audit-logs and /admin/analysis-doc still 200 with expected shapes. No mocked APIs. No frontend testing per scope.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "POST /api/admin/subscription", "issue": "Pydantic model SubscriptionSet does not use Field(ge=1, le=3650) for duration_days; the range check is done in the handler and returns HTTPException 400 (correct behavior), but declaring it in the schema would surface the constraint in the OpenAPI docs. Cosmetic."},
+      {"endpoint": "POST /api/admin/subscription", "issue": "log_audit is called with action='update' even on the very first configuration (when there was no prior subscription). Semantically 'create' might be more accurate for the first write. Non-blocking — existing tests filter by entity_type='subscription' which works either way."},
+      {"endpoint": "GET /api/admin/subscription", "issue": "The default (unconfigured) response is computed and returned but not persisted — every call before the GM sets one hits the fallback branch. Harmless but a light DB write on first access could reduce recomputation. Non-blocking."}
+    ]
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": [], "react_native_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_subscription.py",
+    "/app/backend/tests/test_audit_and_analysis.py",
+    "/app/backend/tests/test_admin_backup.py",
+    "/app/backend/tests/test_gcaan_backend.py",
+    "/app/backend/tests/test_comprehensive_report.py",
+    "/app/backend/tests/test_delete_and_range.py",
+    "/app/backend/tests/test_reports_refactor.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Optional: declare duration_days: Optional[int] = Field(default=None, ge=1, le=3650) on SubscriptionSet so the constraint appears in /docs; the handler-side 400 already enforces it correctly.",
+    "Optional: use action='create' on the first POST (when db.settings has no prior subscription) and 'update' on subsequent POSTs for cleaner audit semantics.",
+    "Optional: consider adding an index on db.settings.key (unique) since it is now queried on every subscription request."
+  ],
+  "critical_code_review_comments": [
+    "server.py:1030-1035 SubscriptionSet — clean optional payload; would benefit from Field constraints (see action items) but functionally sound.",
+    "server.py:1038-1071 _compute_subscription_view — correctly clamps days_remaining and percent_used to non-negative values, rounds percent_used to 1 decimal and caps at 100. expired flag correctly set to True when end_date is missing/unparseable (fallback) — matches default behavior for the fallback branch.",
+    "server.py:1074-1090 GET /admin/subscription — uses get_current_user (any authenticated user), returns a synthetic default with configured=False when nothing has been set. _id excluded via projection. Matches spec.",
+    "server.py:1093-1141 POST /admin/subscription — require_roles('general_manager') enforces 403 for non-GM; explicit HTTPException 400 for each validation failure (invalid date format, bad duration range, missing input, end<start); upserts settings.key='subscription' and logs audit with entity_type='subscription'. All expected side effects covered by tests.",
+    "server.py:1134-1139 log_audit call — details include start_date/end_date; user_role is captured inside log_audit via the user dict passed in. Confirmed in the audit-log fetch test."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_subscription.py (new — 24 tests)"
+  ],
+  "success_rate": {"backend": "100% (142/142 pytest — 24 new subscription + 118 prior)", "frontend": "N/A (backend-only per scope)"},
+  "seed_data_creation": "Reused existing TEST_audit_dm_probe (department_manager, password pw1234) for the non-GM 403 check — created idempotently by test_audit_and_analysis fixture and reused here. The subscription document (db.settings.key='subscription') is repeatedly overwritten during tests with TEST_sub_* notes; final state after the run has note='TEST_sub_audit' and duration 15 days from today (harmless — GM can override at any time via the app).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Iteration 13 adds full coverage for /api/admin/subscription (GET+POST). Full backend suite is 142/142. Note (a) POST always logs audit action='update' regardless of whether a prior subscription existed; if action semantics change to 'create' on first write, update test_audit_log_entry_created accordingly. Note (b) After the run, the subscription document is left in a configured state (~15 days remaining, note starts with 'TEST_sub_'); this does not affect subsequent test runs because every subscription test either overwrites it or reads and asserts on its own POST result. Note (c) BASE_URL resolution uses EXPO_PUBLIC_BACKEND_URL (the real key in /app/frontend/.env) with EXPO_BACKEND_URL as a fallback for parity with older test files. Test creds unchanged: admin/admin123 (GM); TEST_audit_dm_probe/pw1234 (department_manager)."
+}

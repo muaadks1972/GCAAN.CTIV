@@ -1,0 +1,89 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) tailored for Aviation/Government Enterprise",
+  "typography": {
+    "fonts": {
+      "heading": "'Tajawal', sans-serif",
+      "body": "'Cairo', sans-serif",
+      "import_url": "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    },
+    "scale": {
+      "h1": "text-2xl font-bold tracking-tight text-slate-900",
+      "h2": "text-xl font-bold text-slate-900",
+      "h3": "text-lg font-semibold text-slate-800",
+      "body": "text-sm md:text-base font-normal text-slate-600 leading-relaxed",
+      "small": "text-xs text-slate-500",
+      "label": "text-xs font-semibold tracking-wide text-slate-500 uppercase"
+    }
+  },
+  "colors": {
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "primary": "#1E3A8A",
+    "primary_hover": "#1E40AF",
+    "secondary": "#0EA5E9",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "border": "#E2E8F0",
+    "status": {
+      "success": "#10B981",
+      "success_bg": "#D1FAE5",
+      "warning": "#F59E0B",
+      "warning_bg": "#FEF3C7",
+      "danger": "#EF4444",
+      "danger_bg": "#FEE2E2",
+      "info": "#3B82F6",
+      "info_bg": "#DBEAFE"
+    }
+  },
+  "layout_and_spacing": {
+    "global_direction": "rtl",
+    "app_container": "w-full max-w-md mx-auto h-[100dvh] bg-slate-50 flex flex-col relative shadow-2xl overflow-hidden",
+    "content_area": "flex-1 overflow-y-auto pb-20 p-4 sm:p-6",
+    "gap": "gap-4",
+    "radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-xl",
+      "badge": "rounded-full",
+      "input": "rounded-xl"
+    }
+  },
+  "components": {
+    "card": "bg-white rounded-2xl border border-slate-200 shadow-sm p-4",
+    "button_primary": "w-full bg-[#1E3A8A] hover:bg-[#1E40AF] text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center transition-colors active:scale-[0.98]",
+    "button_secondary": "w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center transition-colors active:scale-[0.98]",
+    "input": "w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-right text-slate-900 focus:bg-white focus:ring-2 focus:ring-[#0EA5E9] focus:border-[#0EA5E9] outline-none transition-all placeholder:text-slate-400",
+    "bottom_tab": "absolute bottom-0 w-full max-w-md bg-white/90 backdrop-blur-xl border-t border-slate-200 flex justify-around items-center h-16 px-2 z-50",
+    "header": "bg-white border-b border-slate-200 px-4 py-4 flex items-center justify-between sticky top-0 z-40",
+    "badge": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage_notes": "Use lucide-react. Ensure direction-specific icons (like ChevronRight) are logically aligned for RTL (Right-to-Left). Typically, 'back' is a ChevronRight in RTL."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "login_background",
+        "url": "https://images.unsplash.com/photo-1646768843273-4dbb7a174a4d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxhaXJwb3J0JTIwY29udHJvbCUyMHRvd2VyfGVufDB8fHx8MTc4Mjg4OTk0N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Airport control tower for the login screen background or top hero section"
+      },
+      {
+        "category": "dashboard_accent",
+        "url": "https://images.unsplash.com/photo-1530545124313-ce5e8eae55af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxhdmlhdGlvbiUyMGJsdWUlMjBza3l8ZW58MHx8fHwxNzgyODg5OTQ4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Aviation blue sky with airplane for header accents or profile backgrounds"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Set `<html dir='rtl'>` in index.html to enforce Arabic Right-to-Left alignment globally.",
+    "Simulate a mobile app: Wrap the main routes in a `<div className='w-full max-w-md mx-auto h-[100dvh] bg-slate-50 flex flex-col relative shadow-2xl overflow-hidden'>`. This ensures it looks like an Expo app even in a desktop browser.",
+    "Import 'Tajawal' and 'Cairo' fonts from Google Fonts in index.css. Apply 'font-sans' mapping to Tajawal for headings and Cairo for body in tailwind.config.js.",
+    "Implement bottom tab navigation (fixed at bottom of the max-w-md container) for quick switching between Dashboard, Reports, Activities, and Profile.",
+    "Brand Identity: Create a placeholder GCAAN Logo (blue circular with an aviation tower & wings) using an SVG or Lucide icons stacked.",
+    "Designer Credit: Add 'تصميم المهندس معاد كاظم' (Designed by Eng. Muaad Kazim) subtly in the Login or Profile footer.",
+    "Every interactive element MUST have a `data-testid` attribute (e.g., `data-testid=\"login-submit-btn\"`, `data-testid=\"activity-card-1\"`).",
+    "Approval Workflow: Color code status badges heavily. Amber for pending, Emerald for approved, Red for rejected. Show approval timeline visually.",
+    "Use Shadcn UI components for Tabs, Select, and Dialogs, but adapt their styles to have generous border-radius (rounded-xl) and RTL compatibility."
+  ]
+}
